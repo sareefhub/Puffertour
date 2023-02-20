@@ -8,6 +8,7 @@ import AdditionalInformationDaysTour from './pages/additional-information-days-t
 import AdditionalInformationPackageTour from './pages/additional-information-package-tour';
 import DaysTour from './pages/days-tour';
 import PackageTour from './pages/package-tour';
+import HowToBook from './pages/how-to-book';
 import './style.css';
 
 function App () {
@@ -22,6 +23,7 @@ function App () {
           <Route path='/additional-information-package-tour' element={<AdditionalInformationPackageTour/>}/>
           <Route path='/days-tour' element={<DaysTour/>}/>
           <Route path='/package-tour' element={<PackageTour/>}/>
+          <Route path='/how-to-book' element={<HowToBook/>}/>
         </Routes>
     </BrowserRouter>
   );

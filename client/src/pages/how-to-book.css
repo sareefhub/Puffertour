@@ -1,0 +1,262 @@
+.how-to-book-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    border-color: var(--dl-color-gray-black);
+    border-width: 1px;
+    flex-direction: column;
+    background-color: #E8E8E8;
+  }
+  .how-to-book-container4 {
+    gap: var(--dl-space-space-unit);
+    width: 100%;
+    height: 383px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .how-to-book-image2 {
+    width: 324px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .how-to-book-icon10 {
+    width: 40px;
+    height: 40px;
+  }
+  .how-to-book-image3 {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+  }
+  .how-to-book-icon12 {
+    width: 40px;
+    height: 40px;
+  }
+  .how-to-book-image4 {
+    width: 310px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .how-to-book-container5 {
+    gap: var(--dl-space-space-tripleunit);
+    width: 1344px;
+    height: 66px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    border-radius: var(--dl-radius-radius-radius8);
+    justify-content: flex-start;
+    background-color: #c7b345;
+  }
+  .how-to-book-form08 {
+    width: 229px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .how-to-book-text1 {
+    color: var(--dl-color-gray-white);
+    font-size: 25px;
+    text-align: left;
+    font-family: Pridi;
+  }
+  .how-to-book-container6 {
+    width: 1372px;
+    height: 164px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .how-to-book-form09 {
+    width: 886px;
+    height: 298px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .how-to-book-text2 {
+    font-family: Pridi;
+  }
+  .how-to-book-text5 {
+    font-family: Pridi;
+  }
+  .how-to-book-text6 {
+    font-family: Pridi;
+  }
+  .how-to-book-text7 {
+    font-family: Pridi;
+  }
+  .how-to-book-container7 {
+    width: 100%;
+    height: 97px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .how-to-book-form10 {
+    width: 200px;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--dl-radius-radius-radius8);
+    justify-content: center;
+    background-color: #927357;
+  }
+  .how-to-book-text8 {
+    color: var(--dl-color-gray-white);
+    font-family: Pridi;
+  }
+  .how-to-book-container8 {
+    width: 100%;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .how-to-book-form11 {
+    gap: 1;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .how-to-book-navlink7 {
+    font-family: Pridi;
+    border-radius: var(--dl-radius-radius-radius8);
+    text-decoration: none;
+    background-color: #D9D5C5;
+  }
+  .how-to-book-form12 {
+    gap: 1;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .how-to-book-button {
+    font-family: Pridi;
+    border-radius: var(--dl-radius-radius-radius8);
+    text-decoration: none;
+    background-color: #D9D5C5;
+  }
+  @media(max-width: 1200px) {
+    .how-to-book-header {
+      width: 100%;
+    }
+    .how-to-book-image2 {
+      width: 285px;
+      height: 147px;
+    }
+    .how-to-book-image4 {
+      width: 280px;
+      height: 125px;
+    }
+    .how-to-book-container5 {
+      width: 1111px;
+      height: 48px;
+    }
+    .how-to-book-container6 {
+      width: 100%;
+    }
+    .how-to-book-form09 {
+      align-self: center;
+    }
+  }
+  @media(max-width: 991px) {
+    .how-to-book-container5 {
+      width: 959px;
+      height: 44px;
+    }
+    .how-to-book-container6 {
+      width: 100%;
+    }
+  }
+  @media(max-width: 767px) {
+    .how-to-book-header {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    .how-to-book-nav {
+      display: none;
+    }
+    .how-to-book-burger-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .how-to-book-btn-group {
+      display: none;
+    }
+    .how-to-book-image2 {
+      display: none;
+    }
+    .how-to-book-image4 {
+      display: none;
+    }
+    .how-to-book-container5 {
+      width: 727px;
+      height: 39px;
+    }
+    .how-to-book-container6 {
+      width: 100%;
+    }
+    .how-to-book-form09 {
+      width: 651px;
+      margin-right: 0px;
+    }
+    .how-to-book-form10 {
+      border-radius: var(--dl-radius-radius-radius8);
+    }
+    .how-to-book-text8 {
+      color: var(--dl-color-gray-white);
+    }
+    .how-to-book-form11 {
+      border-radius: var(--dl-radius-radius-radius8);
+    }
+    .how-to-book-navlink7 {
+      font-family: Pridi;
+      border-radius: var(--dl-radius-radius-radius8);
+    }
+    .how-to-book-button {
+      font-family: Pridi;
+      border-radius: var(--dl-radius-radius-radius8);
+    }
+  }
+  @media(max-width: 479px) {
+    .how-to-book-header {
+      padding: var(--dl-space-space-unit);
+    }
+    .how-to-book-mobile-menu {
+      padding: 16px;
+    }
+    .how-to-book-image2 {
+      display: none;
+    }
+    .how-to-book-image4 {
+      display: none;
+    }
+    .how-to-book-container5 {
+      width: 434px;
+      justify-content: center;
+    }
+    .how-to-book-container6 {
+      width: 100%;
+    }
+    .how-to-book-form09 {
+      width: 432px;
+      height: 142px;
+      align-self: center;
+      margin-right: 0px;
+    }
+    .how-to-book-form10 {
+      border-radius: var(--dl-radius-radius-radius8);
+    }
+  }
