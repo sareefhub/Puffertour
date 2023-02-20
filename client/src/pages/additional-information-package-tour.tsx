@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import { Link } from 'react-router-dom'
 
 import './additional-information-package-tour.css'
 
@@ -25,7 +24,7 @@ const AdditionalInformationPackageTour: React.FC = (props) => {
             <div className="additional-information-package-tour-container03"></div>
             <form className="additional-information-package-tour-form">
               <img
-                alt="image"
+                alt=""
                 src="/playground_assets/logo-200h.png"
                 className="additional-information-package-tour-image"
               />
@@ -52,7 +51,7 @@ const AdditionalInformationPackageTour: React.FC = (props) => {
               <div className="additional-information-package-tour-nav1">
                 <div className="additional-information-package-tour-container04">
                   <img
-                    alt="image"
+                    alt=""
                     src="https://presentation-website-assets.teleporthq.io/logos/logo.png"
                     className="additional-information-package-tour-image1"
                   />
@@ -141,7 +140,7 @@ const AdditionalInformationPackageTour: React.FC = (props) => {
         </div>
         <div className="additional-information-package-tour-container05">
           <img
-            alt="image"
+            alt=""
             src="https://www.touronthai.com/gallery/photo/74000016/khoyor12.jpg"
             className="additional-information-package-tour-image2"
           />
@@ -152,7 +151,7 @@ const AdditionalInformationPackageTour: React.FC = (props) => {
             <path d="M658 708l-60 60-256-256 256-256 60 60-196 196z"></path>
           </svg>
           <img
-            alt="image"
+            alt=""
             src="/playground_assets/maxresdefault-300h.jpg"
             className="additional-information-package-tour-image3"
           />
@@ -163,7 +162,7 @@ const AdditionalInformationPackageTour: React.FC = (props) => {
             <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
           </svg>
           <img
-            alt="image"
+            alt=""
             src="https://s359.thaibuffer.com/pagebuilder/81d0f802-5715-4950-8bb2-7896ce7a3059.jpg"
             className="additional-information-package-tour-image4"
           />
@@ -328,8 +327,7 @@ const AdditionalInformationPackageTour: React.FC = (props) => {
                       <h1>2,500</h1>
                     </form>
                     <form className="additional-information-package-tour-form13">
-                      <Link
-                        to="/payment"
+                      <button
                         className="additional-information-package-tour-navlink6 button"
                       >
                         <span className="additional-information-package-tour-text37">
@@ -337,7 +335,7 @@ const AdditionalInformationPackageTour: React.FC = (props) => {
                           <br></br>
                           <br></br>
                         </span>
-                      </Link>
+                      </button>
                     </form>
                   </div>
                   <div className="additional-information-package-tour-container15">

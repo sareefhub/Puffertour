@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import { Link } from 'react-router-dom'
 
 import './additional-information-days-tour.css'
 
@@ -24,7 +23,7 @@ const AdditionalInformationDaysTour: React.FC = (props) => {
           <div className="additional-information-days-tour-container02"></div>
           <form className="additional-information-days-tour-form">
             <img
-              alt="image"
+              alt=""
               src="/playground_assets/logo-200h.png"
               className="additional-information-days-tour-image"
             />
@@ -51,7 +50,7 @@ const AdditionalInformationDaysTour: React.FC = (props) => {
             <div className="additional-information-days-tour-nav1">
               <div className="additional-information-days-tour-container03">
                 <img
-                  alt="image"
+                  alt=""
                   src="https://presentation-website-assets.teleporthq.io/logos/logo.png"
                   className="additional-information-days-tour-image1"
                 />
@@ -132,17 +131,17 @@ const AdditionalInformationDaysTour: React.FC = (props) => {
             </form>
           </form>
           <div className="additional-information-days-tour-btn-group">
-            <text onClick={() => navigate('/register')}
+            <button onClick={() => navigate('/login')}
               className="additional-information-days-tour-navlink5 button"
             >
               เข้าสู่ระบบ
-            </text>
+            </button>
           </div>
         </header>
       </div>
       <div className="additional-information-days-tour-container04">
         <img
-          alt="image"
+          alt=""
           src="https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03005279_1.jpeg"
           className="additional-information-days-tour-image2"
         />
@@ -153,7 +152,7 @@ const AdditionalInformationDaysTour: React.FC = (props) => {
           <path d="M658 708l-60 60-256-256 256-256 60 60-196 196z"></path>
         </svg>
         <img
-          alt="image"
+          alt=""
           src="https://www.tripniceday.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Ftripniceday%2Fuploads%2Fplaces%2F1586852447819.jpg&amp;w=1080&amp;q=75"
           className="additional-information-days-tour-image3"
         />
@@ -164,7 +163,7 @@ const AdditionalInformationDaysTour: React.FC = (props) => {
           <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
         </svg>
         <img
-          alt="image"
+          alt=""
           src="https://news.gimyong.com/attachment/image/50996"
           className="additional-information-days-tour-image4"
         />
@@ -245,8 +244,7 @@ const AdditionalInformationDaysTour: React.FC = (props) => {
               <h1>500</h1>
             </form>
             <form className="additional-information-days-tour-form14">
-              <Link
-                to="/payment"
+              <button
                 className="additional-information-days-tour-navlink6 button"
               >
                 <span className="additional-information-days-tour-text18">
@@ -254,7 +252,7 @@ const AdditionalInformationDaysTour: React.FC = (props) => {
                   <br></br>
                   <br></br>
                 </span>
-              </Link>
+              </button>
             </form>
           </form>
         </div>
