@@ -62,36 +62,36 @@ const Homepage: React.FC = (props) => {
                 </div>
                 <form className="home-form01">
                   <form className="home-form02">
-                    <text className="home-navlink">
+                    <text onClick={() => navigate('/home')} className="home-navlink">
                       หน้าแรก
                     </text>
                   </form>
                   <form className="home-form03">
-                    <text className="home-navlink1">
+                    <text onClick={() => navigate('/days-tour')} className="home-navlink1">
                       ทัวร์รายวัน
                     </text>
                   </form>
                   <form className="home-form04">
-                    <text className="home-navlink2">
+                    <text onClick={() => navigate('/package-tour')} className="home-navlink2">
                       แพ็คเกจทัวร์
                     </text>
                   </form>
                   <form className="home-form05">
-                    <text className="home-navlink3">
+                    <text onClick={() => navigate('/how-to-book')} className="home-navlink3">
                       วิธีการจอง
                     </text>
                   </form>
                   <form className="home-form06">
-                    <text className="home-navlink4">
+                    <text onClick={() => navigate('/payment')} className="home-navlink4">
                       แจ้งชำระเงิน
                     </text>
                   </form>
                   <form className="home-form07">
-                    <span className="home-text01">เกี่ยวกับเรา</span>
+                    <span onClick={() => navigate('/about-us')} className="home-text01">เกี่ยวกับเรา</span>
                   </form>
                 </form>
                 <div className="home-btn-group">
-                  <button className="home-navlink5 button">
+                  <button onClick={() => navigate('/login')} className="home-navlink5 button">
                     เข้าสู่ระบบ
                   </button>
                 </div>

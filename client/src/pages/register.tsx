@@ -1,9 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 import './register.css'
 
 const Register: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="register-container">
       <title>
@@ -76,12 +78,12 @@ const Register: React.FC = () => {
           <span className="register-text14">ยอมรับข้อตกลงและเงื่อนไข</span>
         </form>
         <form className="register-form10">
-          <Link to="/login" className="register-navlink button">
+          <button onClick={() => navigate('/login')} className="register-navlink button">
             สมัครสมาชิก
-          </Link>
+          </button>
         </form>
         <form className="register-form11">
-          <Link to="/login" className="register-navlink1">
+          <text onClick={() => navigate('/login')} className="register-navlink1">
             <span>
               มีบัญชีอยู่แล้ว ?
               <span
@@ -91,7 +93,7 @@ const Register: React.FC = () => {
               />
             </span>
             <span>เข้าสู่ระบบ</span>
-          </Link>
+          </text>
         </form>
       </div>
     </div>

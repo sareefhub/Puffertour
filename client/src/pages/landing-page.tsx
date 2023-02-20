@@ -21,10 +21,10 @@ const LandingPage: React.FC = (props) => {
         </button>
       </div>
       <div className="landing-page-container2">
-        <button className="landing-page-navlink1 button">
+        <button onClick={() => navigate('/login')} className="landing-page-navlink1 button">
           เข้าสู่ระบบ
         </button>
-        <button  className="landing-page-navlink2 button">
+        <button onClick={() => navigate('/register')} className="landing-page-navlink2 button">
           สมัครสมาชิก
         </button>
       </div>

@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 
 import "./login.css";
 
 const Login: React.FC = (props) => {
+  const navigate = useNavigate();
+
   return (
     <div className="login-container">
       <title>
@@ -36,12 +38,12 @@ const Login: React.FC = (props) => {
           />
         </form>
         <form className="login-form5">
-          <Link to="/home" className="login-navlink button">
+          <button onClick={() => navigate('/home')} className="login-navlink button">
             เข้าสู่ระบบ
-          </Link>
+          </button>
         </form>
         <form className="login-form6">
-          <Link to="/register" className="login-navlink1">
+          <text onClick={() => navigate('/register')} className="login-navlink1">
             <span>
               ยังไม่มีบัญชี
               <span
@@ -51,7 +53,7 @@ const Login: React.FC = (props) => {
               />
             </span>
             <span className="login-text4">ผู้ใช้งาน?</span>
-          </Link>
+          </text>
         </form>
       </div>
     </div>
