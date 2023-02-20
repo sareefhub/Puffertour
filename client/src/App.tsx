@@ -6,6 +6,7 @@ import Login from './pages/login';
 import Register from './pages/register';
 import AdditionalInformationDaysTour from './pages/additional-information-days-tour';
 import AdditionalInformationPackageTour from './pages/additional-information-package-tour';
+import DaysTour from './pages/days-tour';
 import './style.css';
 
 function App () {
@@ -18,6 +19,7 @@ function App () {
           <Route path='/register' element={<Register/>}/>
           <Route path='/additional-information-days-tour' element={<AdditionalInformationDaysTour/>}/>
           <Route path='/additional-information-package-tour' element={<AdditionalInformationPackageTour/>}/>
+          <Route path='/days-tour' element={<DaysTour/>}/>
         </Routes>
     </BrowserRouter>
   );
