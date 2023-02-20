@@ -178,11 +178,6 @@ const Homepage: React.FC = (props) => {
                 <span className="home-text13">เต็ม!!!</span>
               </form>
             </form>
-            <div className="home-container06">
-              <div className="home-container07">
-                <div className="home-container08"></div>
-              </div>
-            </div>
             <div className="home-container09">
               <form className="home-form13">
                 <span className="home-text14">แพ็กเกจทัวร์</span>
