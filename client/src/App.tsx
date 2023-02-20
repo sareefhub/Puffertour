@@ -4,6 +4,8 @@ import LandingPage from './pages/landing-page';
 import Homepage from './pages/home';
 import Login from './pages/login';
 import Register from './pages/register';
+import AdditionalInformationDaysTour from './pages/additional-information-days-tour';
+import AdditionalInformationPackageTour from './pages/additional-information-package-tour';
 import './style.css';
 
 function App () {
@@ -14,6 +16,8 @@ function App () {
           <Route path='/home' element={<Homepage/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
+          <Route path='/additional-information-days-tour' element={<AdditionalInformationDaysTour/>}/>
+          <Route path='/additional-information-package-tour' element={<AdditionalInformationPackageTour/>}/>
         </Routes>
     </BrowserRouter>
   );
