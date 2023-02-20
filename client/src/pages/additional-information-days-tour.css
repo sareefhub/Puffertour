@@ -7,68 +7,8 @@
     flex-direction: column;
     background-color: #E8E8E8;
   }
-  .additional-information-days-tour-container01 {
-    width: 100%;
-    height: 74px;
-    display: flex;
-    align-items: flex-start;
-  }
-  .additional-information-days-tour-header {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    position: relative;
-    max-width: 1600px;
-    align-items: center;
-    padding-top: 32px;
-    padding-left: 48px;
-    padding-right: 48px;
-    padding-bottom: 32px;
-    justify-content: space-between;
-    background-color: #c7b345;
-  }
-  .additional-information-days-tour-container02 {
-    flex: 0 0 auto;
-    width: auto;
-    border: 2px dashed rgba(120, 120, 120, 0.4);
-    height: auto;
-    display: flex;
-    align-items: space-between;
-    flex-direction: column;
-  }
-  .additional-information-days-tour-form {
-    gap: var(--dl-space-space-unit);
-    top: -3px;
-    left: 0px;
-    width: 192px;
-    height: 85px;
-    display: flex;
-    position: absolute;
-    align-items: center;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .additional-information-days-tour-image {
-    width: 80px;
-    height: 60px;
-    object-fit: cover;
-  }
-  .additional-information-days-tour-text {
-    color: #ffffff;
-    font-size: 25px;
-    font-style: normal;
-    font-family: Pridi;
-    font-weight: 700;
-  }
-  .additional-information-days-tour-nav {
-    display: flex;
-  }
   .additional-information-days-tour-burger-menu {
     display: none;
-  }
-  .additional-information-days-tour-icon {
-    width: 16px;
-    height: 16px;
   }
   .additional-information-days-tour-mobile-menu {
     top: 0px;
@@ -82,153 +22,6 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: #fff;
-  }
-  .additional-information-days-tour-nav1 {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .additional-information-days-tour-container03 {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 48px;
-    justify-content: space-between;
-  }
-  .additional-information-days-tour-image1 {
-    height: 2rem;
-  }
-  .additional-information-days-tour-menu-close {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .additional-information-days-tour-icon02 {
-    width: 16px;
-    height: 16px;
-  }
-  .additional-information-days-tour-icon04 {
-    width: 16px;
-    height: 16px;
-    margin-right: 32px;
-  }
-  .additional-information-days-tour-icon06 {
-    width: 16px;
-    height: 16px;
-    margin-right: 32px;
-  }
-  .additional-information-days-tour-icon08 {
-    width: 16px;
-    height: 16px;
-  }
-  .additional-information-days-tour-form01 {
-    gap: var(--dl-space-space-halfunit);
-    width: 1013px;
-    height: 63px;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .additional-information-days-tour-form02 {
-    width: 124px;
-    height: 100%;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .additional-information-days-tour-navlink {
-    color: var(--dl-color-gray-white);
-    font-size: 20px;
-    font-family: Pridi;
-    text-decoration: none;
-  }
-  .additional-information-days-tour-form03 {
-    width: 124px;
-    height: 100%;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .additional-information-days-tour-navlink1 {
-    color: var(--dl-color-gray-white);
-    font-size: 20px;
-    font-family: Pridi;
-    text-decoration: none;
-  }
-  .additional-information-days-tour-form04 {
-    width: 124px;
-    height: 100%;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .additional-information-days-tour-navlink2 {
-    color: var(--dl-color-gray-white);
-    font-size: 20px;
-    font-family: Pridi;
-    text-decoration: none;
-  }
-  .additional-information-days-tour-form05 {
-    width: 124px;
-    height: 100%;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .additional-information-days-tour-navlink3 {
-    color: var(--dl-color-gray-white);
-    font-size: 20px;
-    font-family: Pridi;
-    text-decoration: none;
-  }
-  .additional-information-days-tour-form06 {
-    width: 124px;
-    height: 100%;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .additional-information-days-tour-navlink4 {
-    color: var(--dl-color-gray-white);
-    font-size: 20px;
-    font-family: Pridi;
-    text-decoration: none;
-  }
-  .additional-information-days-tour-form07 {
-    width: 124px;
-    height: 100%;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .additional-information-days-tour-text01 {
-    color: var(--dl-color-gray-white);
-    font-size: 20px;
-    font-family: Pridi;
-    text-decoration: none;
-  }
-  .additional-information-days-tour-btn-group {
-    display: flex;
-    align-self: center;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .additional-information-days-tour-navlink5 {
-    color: var(--dl-color-gray-white);
-    align-self: flex-start;
-    font-family: Pridi;
-    border-width: 0px;
-    border-radius: var(--dl-radius-radius-radius8);
-    text-decoration: none;
-    background-color: rgb(113, 95, 35);
   }
   .additional-information-days-tour-container04 {
     gap: var(--dl-space-space-unit);
@@ -298,7 +91,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    margin-left: 126px;
+    margin-left: 370px;
     justify-content: center;
   }
   .additional-information-days-tour-text03 {
@@ -312,7 +105,7 @@
     height: 61px;
     display: flex;
     align-items: center;
-    margin-left: 635px;
+    margin-left: 550px;
     justify-content: center;
   }
   .additional-information-days-tour-text04 {
@@ -370,6 +163,7 @@
     margin-left: 50px;
     flex-direction: column;
     justify-content: flex-start;
+    line-height: 0.6;
   }
   .additional-information-days-tour-text15 {
     font-family: Pridi;
@@ -406,7 +200,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    margin-left: 126px;
+    margin-left: 350px;
     justify-content: center;
   }
   .additional-information-days-tour-text22 {
@@ -420,7 +214,7 @@
     height: 61px;
     display: flex;
     align-items: center;
-    margin-left: 635px;
+    margin-left: 550px;
     justify-content: center;
   }
   .additional-information-days-tour-text23 {
