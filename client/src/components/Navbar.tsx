@@ -7,12 +7,11 @@ const Navbar: React.FC = (props) => {
     const navigate = useNavigate();
 
     return (
-        <div className="home-container">
+        <div>
         <title>
           <title>Home - Puffer Tour v.1</title>
           <meta property="og:title" content="Home - Puffer Tour v.1" />
         </title>
-        <div className="home-top-container">
           <div className="home-container01">
             <header data-role="Header" className="home-header">
               <div className="home-container02"></div>
@@ -98,8 +97,7 @@ const Navbar: React.FC = (props) => {
               </div>
             </header>
           </div>
-        </div>
-    </div>
+      </div>
     )
   }
 
