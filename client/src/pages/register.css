@@ -1,0 +1,206 @@
+.register-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    justify-content: center;
+    background-image: url('https://www.paiduaykan.com/travel/wp-content/uploads/2019/03/DSC_1580-800x536.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .register-container1 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 771px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .register-form {
+    width: 200px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .register-text {
+    height: 61px;
+    font-family: Pridi;
+  }
+  .register-form01 {
+    width: 310px;
+    height: 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .register-text01 {
+    font-family: Pridi;
+  }
+  .register-checkbox {
+    flex: 0.1;
+    align-self: center;
+  }
+  .register-text02 {
+    font-family: Pridi;
+  }
+  .register-checkbox1 {
+    flex: 0.1;
+    align-self: center;
+  }
+  .register-text03 {
+    font-family: Pridi;
+  }
+  .register-form02 {
+    width: 359px;
+    height: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .register-text05 {
+    font-family: Pridi;
+  }
+  .register-text07 {
+    font-family: Pridi;
+  }
+  .register-form03 {
+    gap: var(--dl-space-space-tripleunit);
+    width: 370px;
+    height: 46px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .register-textinput {
+    width: 150px;
+    padding-left: 0px;
+  }
+  .register-textinput1 {
+    width: 160px;
+    height: 37px;
+  }
+  .register-form04 {
+    width: 365px;
+    height: 78px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .register-text09 {
+    font-family: Pridi;
+  }
+  .register-textinput2 {
+    width: 100%;
+  }
+  .register-form05 {
+    width: 368px;
+    height: 88px;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 2px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .register-text10 {
+    font-family: Pridi;
+  }
+  .register-textinput3 {
+    width: 100%;
+  }
+  .register-form06 {
+    width: 367px;
+    height: 67px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .register-text11 {
+    font-family: Pridi;
+  }
+  .register-textinput4 {
+    width: 100%;
+  }
+  .register-form07 {
+    width: 368px;
+    height: 68px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .register-text12 {
+    font-family: Pridi;
+  }
+  .register-textinput5 {
+    width: 100%;
+  }
+  .register-form08 {
+    width: 370px;
+    height: 68px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .register-text13 {
+    font-family: Pridi;
+  }
+  .register-textinput6 {
+    width: 100%;
+    height: 50%;
+  }
+  .register-form09 {
+    width: 364px;
+    height: 38px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .register-checkbox2 {
+    flex: 0.1;
+    align-self: center;
+  }
+  .register-text14 {
+    align-self: center;
+    font-family: Pridi;
+  }
+  .register-form10 {
+    width: 289px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .register-navlink {
+    font-family: Pridi;
+    text-decoration: none;
+  }
+  .register-form11 {
+    width: 387px;
+    height: 49px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .register-navlink1 {
+    color: var(--dl-color-gray-white);
+    font-family: Pridi;
+    text-decoration: none;
+  }
+  @media(max-width: 1200px) {
+    .register-navlink {
+      color: #ffffff;
+      background-color: #3991e9;
+    }
+    .register-navlink1 {
+      color: #ffffff;
+    }
+  }
+  
