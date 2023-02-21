@@ -9,6 +9,7 @@ import AdditionalInformationPackageTour from './pages/additional-information-pac
 import DaysTour from './pages/days-tour';
 import PackageTour from './pages/package-tour';
 import HowToBook from './pages/how-to-book';
+import PayMent from './pages/payment';
 import './style.css';
 
 function App () {
@@ -24,6 +25,7 @@ function App () {
           <Route path='/days-tour' element={<DaysTour/>}/>
           <Route path='/package-tour' element={<PackageTour/>}/>
           <Route path='/how-to-book' element={<HowToBook/>}/>
+          <Route path='/payment' element={<PayMent/>}/>
         </Routes>
     </BrowserRouter>
   );
