@@ -28,7 +28,6 @@ function App () {
           <Route path='/how-to-book' element={<HowToBook/>}/>
           <Route path='/payment' element={<PayMent/>}/>
           <Route path='/about-us' element={<AboutUs/>}/>
-
         </Routes>
     </BrowserRouter>
   );

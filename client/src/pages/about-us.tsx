@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Picture from '../components/picture'
 
-
 import './about-us.css'
 
 const AboutUs:React.FC = (props) => {

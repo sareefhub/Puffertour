@@ -86,16 +86,3 @@
     background-color: rgb(162, 139, 134);
     background-color: transparent;
   }
-  @media(max-width: 479px) {
-    .landing-page-container2 {
-      gap: var(--dl-space-space-unit);
-    }
-    .landing-page-navlink1 {
-      width: 210px;
-      height: 48px;
-    }
-    .landing-page-navlink2 {
-      width: 210px;
-      height: 48px;
-    }
-  }
