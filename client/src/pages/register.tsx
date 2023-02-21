@@ -16,50 +16,20 @@ const Register: React.FC = () => {
         <form className="register-form">
           <h1 className="register-text">สมัครสมาชิก</h1>
         </form>
-        <form className="register-form01">
-          <span className="register-text01">เพศ</span>
-          <input type="checkbox" className="register-checkbox" />
-          <span className="register-text02">ชาย</span>
-          <input type="checkbox" className="register-checkbox1" />
-          <span className="register-text03">หญิง</span>
-        </form>
         <form className="register-form02">
           <span>
             <span className="register-text05">
-              ชื่อ 
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
+              ชื่อ นามสกุล
             </span>
-            <span>
-                                                   
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
-            <span className="register-text07">นามสกุล </span>
-            <span>  </span>
           </span>
         </form>
         <form className="register-form03">
           <input type="text" className="register-textinput input" />
           <input type="text" className="register-textinput1 input" />
         </form>
-        <form className="register-form04">
-          <span className="register-text09">เลขบัตรประจำตัวประชาชน</span>
-          <input type="text" className="register-textinput2 input" />
-        </form>
         <form className="register-form05">
-          <span className="register-text10">อีเมลล์</span>
+          <span className="register-text10">อีเมล</span>
           <input type="text" className="register-textinput3 input" />
-        </form>
-        <form className="register-form06">
-          <span className="register-text11">เบอร์โทรศัพท์</span>
-          <input type="text" className="register-textinput4 input" />
         </form>
         <form className="register-form07">
           <span className="register-text12">รหัสผ่าน</span>
