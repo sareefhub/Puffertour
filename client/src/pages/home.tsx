@@ -7,7 +7,7 @@ const Homepage: React.FC = (props) => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="home-container">
       <Navbar />
       <div className="home-container04">
         <img

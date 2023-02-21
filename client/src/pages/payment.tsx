@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+
 import Navbar from '../components/Navbar'
 
 //10-98
@@ -34,7 +35,7 @@ const Payment:React.FC  = (props) => {
         <form className="payment-form11">
           <span className="payment-text03">กรุณาสแกนเพื่อชำระเงิน</span>
           <img
-            alt="image"
+            alt=""
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1024px-QR_code_for_mobile_English_Wikipedia.svg.png"
             className="payment-image2"
           />

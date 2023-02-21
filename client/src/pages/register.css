@@ -194,13 +194,3 @@
     font-family: Pridi;
     text-decoration: none;
   }
-  @media(max-width: 1200px) {
-    .register-navlink {
-      color: #ffffff;
-      background-color: #3991e9;
-    }
-    .register-navlink1 {
-      color: #ffffff;
-    }
-  }
-  
