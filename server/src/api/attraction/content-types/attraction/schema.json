@@ -4,7 +4,8 @@
   "info": {
     "singularName": "attraction",
     "pluralName": "attractions",
-    "displayName": "Attraction"
+    "displayName": "Attraction",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,24 +20,26 @@
       "type": "text"
     },
     "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "illustrations": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "tour_program": {
       "type": "text"
@@ -58,6 +61,9 @@
       "relation": "manyToMany",
       "target": "api::tour-type.tour-type",
       "mappedBy": "attractions"
+    },
+    "remaining": {
+      "type": "integer"
     }
   }
 }
