@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
 import Navbar from "../components/Navbar";
+import Picture from "../components/picture";
 
 import "./days-tour.css";
 
@@ -11,29 +13,7 @@ const DaysTour: React.FC = (props) => {
   return (
     <div className="days-tour-container" >
         <Navbar />
-        <div className="days-tour-container4">
-        <img
-          alt=""
-          src="https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03005279_1.jpeg"
-          className="days-tour-image2"
-        />
-        <svg viewBox="0 0 1024 1024" className="days-tour-icon10">
-          <path d="M658 708l-60 60-256-256 256-256 60 60-196 196z"></path>
-        </svg>
-        <img
-          alt=""
-          src="https://www.tripniceday.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Ftripniceday%2Fuploads%2Fplaces%2F1586852447819.jpg&amp;w=1080&amp;q=75"
-          className="days-tour-image3"
-        />
-        <svg viewBox="0 0 1024 1024" className="days-tour-icon12">
-          <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
-        </svg>
-        <img
-          alt=""
-          src="https://news.gimyong.com/attachment/image/50996"
-          className="days-tour-image4"
-        />
-      </div>
+        <Picture/>
       <div className="days-tour-container5">
         <form className="days-tour-form08">
           <span className="days-tour-text02">ทัวร์รายวัน</span>

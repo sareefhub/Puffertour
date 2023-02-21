@@ -8,37 +8,6 @@
     justify-content: flex-start;
     background-color: #E8E8E8;
   }
-  .days-tour-container4 {
-    gap: var(--dl-space-space-unit);
-    width: 100%;
-    height: 383px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .days-tour-image2 {
-    width: 324px;
-    height: 150px;
-    object-fit: cover;
-  }
-  .days-tour-icon10 {
-    width: 40px;
-    height: 40px;
-  }
-  .days-tour-image3 {
-    width: 400px;
-    height: 250px;
-    object-fit: cover;
-  }
-  .days-tour-icon12 {
-    width: 40px;
-    height: 40px;
-  }
-  .days-tour-image4 {
-    width: 310px;
-    height: 150px;
-    object-fit: cover;
-  }
   .days-tour-container5 {
     gap: var(--dl-space-space-tripleunit);
     width: 1344px;

@@ -1,6 +1,8 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
+
 import Navbar from '../components/Navbar';
+import Picture from '../components/picture';
 
 import './additional-information-package-tour.css'
 
@@ -8,41 +10,9 @@ const AdditionalInformationPackageTour: React.FC = (props) => {
     const navigate = useNavigate();
     
   return (
-    <div>
-      <Navbar/>
     <div className="additional-information-package-tour-container">
-      <div className="additional-information-package-tour-container01">
-        <div className="additional-information-package-tour-container02">
-        </div>
-        <div className="additional-information-package-tour-container05">
-          <img
-            alt=""
-            src="https://www.touronthai.com/gallery/photo/74000016/khoyor12.jpg"
-            className="additional-information-package-tour-image2"
-          />
-          <svg
-            viewBox="0 0 1024 1024"
-            className="additional-information-package-tour-icon10"
-          >
-            <path d="M658 708l-60 60-256-256 256-256 60 60-196 196z"></path>
-          </svg>
-          <img
-            alt=""
-            src="./pictures/เกาะยอ.png"
-            className="additional-information-package-tour-image3"
-          />
-          <svg
-            viewBox="0 0 1024 1024"
-            className="additional-information-package-tour-icon12"
-          >
-            <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
-          </svg>
-          <img
-            alt=""
-            src="https://s359.thaibuffer.com/pagebuilder/81d0f802-5715-4950-8bb2-7896ce7a3059.jpg"
-            className="additional-information-package-tour-image4"
-          />
-        </div>
+      <Navbar/>
+      <Picture/>
         <div className="additional-information-package-tour-container06">
           <form className="additional-information-package-tour-form08">
             <span className="additional-information-package-tour-text02">
@@ -291,10 +261,9 @@ const AdditionalInformationPackageTour: React.FC = (props) => {
           </div>
         </div>
       </div>
-    </div>
-  </div>
   
-)}
+  )
+}
 
 
 export default AdditionalInformationPackageTour
