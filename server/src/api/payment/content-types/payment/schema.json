@@ -4,7 +4,8 @@
   "info": {
     "singularName": "payment",
     "pluralName": "payments",
-    "displayName": "Payment"
+    "displayName": "Payment",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,20 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "payment_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
-    },
-    "payment_status": {
-      "type": "boolean",
-      "default": false,
-      "required": true
+      ]
     },
     "user_id": {
       "type": "string",
