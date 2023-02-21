@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "./home.css";
+import Picture from "../components/picture";
 
 const Homepage: React.FC = (props) => {
   const navigate = useNavigate();
@@ -9,29 +10,7 @@ const Homepage: React.FC = (props) => {
   return (
     <div className="home-container">
       <Navbar />
-      <div className="home-container04">
-        <img
-          alt=""
-          src="https://tatapi.tourismthailand.org/tatfs/Image/CustomPOI/Picture/P03005279_1.jpeg"
-          className="home-image02"
-        />
-        <svg viewBox="0 0 1024 1024" className="home-icon10">
-          <path d="M658 708l-60 60-256-256 256-256 60 60-196 196z"></path>
-        </svg>
-        <img
-          alt=""
-          src="https://www.tripniceday.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Ftripniceday%2Fuploads%2Fplaces%2F1586852447819.jpg&amp;w=1080&amp;q=75"
-          className="home-image03"
-        />
-        <svg viewBox="0 0 1024 1024" className="home-icon12">
-          <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
-        </svg>
-        <img
-          alt=""
-          src="https://news.gimyong.com/attachment/image/50996"
-          className="home-image04"
-        />
-      </div>
+      <Picture/>
       <div id="main-section" className="home-main">
         <div className="home-container05">
           <form className="home-form08">
