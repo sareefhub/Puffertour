@@ -7,53 +7,6 @@
     flex-direction: column;
     background-color: #E8E8E8;
   }
-  .additional-information-days-tour-burger-menu {
-    display: none;
-  }
-  .additional-information-days-tour-mobile-menu {
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100vh;
-    display: none;
-    padding: 32px;
-    z-index: 100;
-    position: absolute;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #fff;
-  }
-  .additional-information-days-tour-container04 {
-    gap: var(--dl-space-space-unit);
-    width: 100%;
-    height: 355px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .additional-information-days-tour-image2 {
-    width: 324px;
-    height: 150px;
-    object-fit: cover;
-  }
-  .additional-information-days-tour-icon10 {
-    width: 40px;
-    height: 40px;
-  }
-  .additional-information-days-tour-image3 {
-    width: 400px;
-    height: 250px;
-    object-fit: cover;
-  }
-  .additional-information-days-tour-icon12 {
-    width: 40px;
-    height: 40px;
-  }
-  .additional-information-days-tour-image4 {
-    width: 310px;
-    height: 150px;
-    object-fit: cover;
-  }
   .additional-information-days-tour-container05 {
     gap: var(--dl-space-space-tripleunit);
     width: 1344px;
