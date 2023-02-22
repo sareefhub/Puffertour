@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 import './register.css';
 
@@ -14,7 +15,16 @@ const Register: React.FC = () => {
 
   const handleRegister = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
+  
+    if (!username || !email || !password || !confirmPassword) {
+      Swal.fire({
+        title: 'คุณป้อนข้อมูลไม่ครบถ้วน!',
+        text: 'กรุณาป้อนให้ครบ',
+        icon: 'warning'
+      });
+      return;
+    }
+  
     try {
       const response = await axios.post('http://localhost:1337/api/auth/local/register', {
         username,
@@ -22,14 +32,20 @@ const Register: React.FC = () => {
         password,
         confirmPassword,
       });
-
+  
       console.log(response.data);
-
+  
+      Swal.fire({
+        title: 'ลงทะเบียนสำเร็จ!',
+        icon: 'success'
+      });
+  
       navigate('/login');
     } catch (error) {
       console.error(error);
     }
   };
+  
 
   return (
     <div className="body">
@@ -86,7 +102,7 @@ const Register: React.FC = () => {
               </div>
               <input type="submit" className="btn" value="ยืนยัน" />
               <text onClick={() => navigate('/login')}> มีบัญชีแล้ว? เข้าสู่ระบบ</text>
-              </form>
+            </form>
           </div>
         </div>
       </div>
