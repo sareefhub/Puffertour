@@ -1,196 +1,88 @@
-.register-container {
-    width: 100%;
-    display: flex;
-    overflow: auto;
-    min-height: 100vh;
-    align-items: center;
-    background-size: cover;
-    justify-content: center;
-    background-image: url('https://www.paiduaykan.com/travel/wp-content/uploads/2019/03/DSC_1580-800x536.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .register-container1 {
-    flex: 0 0 auto;
-    width: 100%;
-    height: 771px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .register-form {
-    width: 200px;
-    height: 43px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .register-text {
-    height: 61px;
-    font-family: Pridi;
-  }
-  .register-form01 {
-    width: 310px;
-    height: 24px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .register-text01 {
-    font-family: Pridi;
-  }
-  .register-checkbox {
-    flex: 0.1;
-    align-self: center;
-  }
-  .register-text02 {
-    font-family: Pridi;
-  }
-  .register-checkbox1 {
-    flex: 0.1;
-    align-self: center;
-  }
-  .register-text03 {
-    font-family: Pridi;
-  }
-  .register-form02 {
-    width: 360px;
-    height: 25px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .register-text05 {
-    font-family: Pridi;
-  }
-  .register-text07 {
-    font-family: Pridi;
-  }
-  .register-form03 {
-    gap: var(--dl-space-space-tripleunit);
-    width: 370px;
-    height: 46px;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .register-textinput {
-    width: 150px;
-    padding-left: 20px;
-  }
-  .register-textinput1 {
-    width: 150px;
-    padding-left: 20px;
-  }
-  .register-form04 {
-    width: 365px;
-    height: 78px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .register-text09 {
-    font-family: Pridi;
-  }
-  .register-textinput2 {
-    width: 100%;
-  }
-  .register-form05 {
-    width: 368px;
-    height: 88px;
-    display: flex;
-    align-items: flex-start;
-    padding-left: 2px;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .register-text10 {
-    font-family: Pridi;
-  }
-  .register-textinput3 {
-    width: 100%;
-  }
-  .register-form06 {
-    width: 367px;
-    height: 67px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .register-text11 {
-    font-family: Pridi;
-  }
-  .register-textinput4 {
-    width: 100%;
-  }
-  .register-form07 {
-    width: 368px;
-    height: 68px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .register-text12 {
-    font-family: Pridi;
-  }
-  .register-textinput5 {
-    width: 100%;
-  }
-  .register-form08 {
-    width: 370px;
-    height: 68px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .register-text13 {
-    font-family: Pridi;
-  }
-  .register-textinput6 {
-    width: 100%;
-  }
-  .register-form09 {
-    width: 364px;
-    height: 38px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    color: rgb(247, 237, 59);
-  }
-  .register-checkbox2 {
-    flex: 0.1;
-    align-self: center;
-  }
-  .register-text14 {
-    align-self: center;
-    font-family: Pridi;
-  }
-  .register-form10 {
-    width: 289px;
-    height: 74px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .register-navlink {
-    font-family: Pridi;
-    text-decoration: none;
-  }
-  .register-form11 {
-    width: 387px;
-    height: 49px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .register-navlink1 {
-    color: var(--dl-color-gray-white);
-    font-family: Pridi;
-    text-decoration: none;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('https://www.paiduaykan.com/travel/wp-content/uploads/2019/03/DSC_1580-800x536.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin: auto;
+}
+
+.card {
+  width: 350px;
+  height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 10px;
+  background-color: #fff; /* add this line */
+}
+
+.card-header {
+  background-color: #333;
+  padding: 16px;
+  text-align: center;
+}
+
+.card-header .text-header {
+  margin: 0;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 90%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 12px 24px;
+  margin-left: 13px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer
+}
+
+.btn:hover {
+  background-color: #ccc;
+  color: #333;
+}
