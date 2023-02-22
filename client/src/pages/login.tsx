@@ -52,7 +52,7 @@ const Login: React.FC = (props) => {
           <button type="submit" className="btn">
             เข้าสู่ระบบ
           </button>
-          <span onClick={() => navigate("/register")}>
+          <span onClick={() => navigate("/register")} style={{ textDecoration: 'underline' }}>
             ยังไม่มีบัญชี ผู้ใช้งาน?
           </span>
         </form>
