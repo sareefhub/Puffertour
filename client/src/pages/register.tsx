@@ -1,73 +1,95 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-import './register.css'
+import './register.css';
 
 const Register: React.FC = () => {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
 
+  const handleRegister = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:1337/api/auth/local/register', {
+        username,
+        email,
+        password,
+        confirmPassword,
+      });
+
+      console.log(response.data);
+
+      navigate('/login');
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-    <div className="register-container">
-      <title>
-        <title>Register - Puffer Tour v.1</title>
-        <meta property="og:title" content="Register - Puffer Tour v.1" />
-      </title>
-      <div className="register-container1">
-        <form className="register-form">
-          <h1 className="register-text">สมัครสมาชิก</h1>
-        </form>
-        <form className="register-form02">
-          <span>
-            <span className="register-text05">
-              ชื่อ นามสกุล
-            </span>
-          </span>
-        </form>
-        <form className="register-form03">
-          <input type="text" className="register-textinput input" />
-          <input type="text" className="register-textinput1 input" />
-        </form>
-        <form className="register-form05">
-          <span className="register-text10">อีเมล</span>
-          <input type="text" className="register-textinput3 input" />
-        </form>
-        <form className="register-form07">
-          <span className="register-text12">รหัสผ่าน</span>
-          <input type="text" className="register-textinput5 input" />
-        </form>
-        <form className="register-form08">
-          <span className="register-text13">ยืนยันรหัสผ่าน</span>
-          <input type="text" className="register-textinput6 input" />
-        </form>
-        <form className="register-form09">
-          <input
-            type="checkbox"
-            defaultChecked={true}
-            className="register-checkbox2"
-          />
-          <span className="register-text14">ยอมรับข้อตกลงและเงื่อนไข</span>
-        </form>
-        <form className="register-form10">
-          <button onClick={() => navigate('/login')} className="register-navlink button">
-            สมัครสมาชิก
-          </button>
-        </form>
-        <form className="register-form11">
-          <text onClick={() => navigate('/login')} className="register-navlink1">
-            <span>
-              มีบัญชีอยู่แล้ว ?
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
-            <span>เข้าสู่ระบบ</span>
-          </text>
-        </form>
+    <div className="body">
+      <div className="container">
+        <div className="card">
+          <div className="card-header">
+            <div className="text-header">สมัครสมาชิก</div>
+          </div>
+          <div className="card-body">
+            <form onSubmit={handleRegister}>
+              <div className="form-group">
+                <label htmlFor="username">ชื่อบัญชีผู้ใช้:</label>
+                <input
+                  className="form-control"
+                  name="username"
+                  id="username"
+                  type="text"
+                  value={username}
+                  onChange={(event) => setUsername(event.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">อีเมล:</label>
+                <input
+                  className="form-control"
+                  name="email"
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">รหัสผ่าน:</label>
+                <input
+                  className="form-control"
+                  name="password"
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="confirm-password">ยืนยันรหัสผ่าน:</label>
+                <input
+                  className="form-control"
+                  name="confirm-password"
+                  id="confirm-password"
+                  type="password"
+                  value={confirmPassword}
+                  onChange={(event) => setConfirmPassword(event.target.value)}
+                />
+              </div>
+              <input type="submit" className="btn" value="ยืนยัน" />
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
