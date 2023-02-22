@@ -5,6 +5,7 @@ import axios from 'axios';
 import './register.css';
 
 const Register: React.FC = () => {
+
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -84,7 +85,8 @@ const Register: React.FC = () => {
                 />
               </div>
               <input type="submit" className="btn" value="ยืนยัน" />
-            </form>
+              <text onClick={() => navigate('/login')}> มีบัญชีแล้ว? เข้าสู่ระบบ</text>
+              </form>
           </div>
         </div>
       </div>
