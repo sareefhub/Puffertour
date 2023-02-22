@@ -80,18 +80,12 @@ const AdditionalInformationDaysTour: React.FC = (props) => {
         <div className="additional-information-days-tour-container08">
           <form className="additional-information-days-tour-form12">
             <form className="additional-information-days-tour-form13">
-              <h1 className="additional-information-days-tour-text15">
-                ราคาเริ่มต้น
-              </h1>
-              <span className="additional-information-days-tour-text16">
-                บาท/คน
+              <span className="additional-information-days-tour-text15">
+                ราคา 500 บาท/คน
               </span>
-              <h1>500</h1>
             </form>
             <form className="additional-information-days-tour-form14">
-              <button
-                className="additional-information-days-tour-navlink6 button"
-              >
+              <button className="additional-information-days-tour-navlink6 button">
                 <span className="additional-information-days-tour-text18">
                   <span>จองเลย!</span>
                   <br></br>
