@@ -8,10 +8,10 @@ const Homepage: React.FC = (props) => {
   const navigate = useNavigate();
 
   return (
-    <div className="home-container">
+    <header className="home-container">
       <Navbar />
       <Picture/>
-      <div id="main-section" className="home-main">
+      <div>
         <div className="home-container05">
           <form className="home-form08">
             <span className="home-text02">ทัวร์รายวัน</span>
@@ -50,7 +50,7 @@ const Homepage: React.FC = (props) => {
             <span className="home-text09">
               เป็นโบราณสถานของชาติ มีลักษณะสถาปัตยกรรมแบบจีน อายุกว่า 100 ปี
               ภายในจัดแสดงศิลปวัตถุที่เป็นมรดกทางวัฒนธรรม
-              อันเป็นเอกลักษณ์ของภาคใต้และของประเทศไทย ดูข้อมูลเพิ่มเติม
+              อันเป็นเอกลักษณ์ของภาคใต้และของประเทศไทย 
             </span>
             <button className="home-button button">ดูเพิ่มเติม</button>
             <span className="home-text10">เหลือเพียง 3 ที่นั่งเท่านั้น!!!</span>
@@ -61,7 +61,6 @@ const Homepage: React.FC = (props) => {
             <span className="home-text12">
               หาดสมิหลาเป็นหาดทรายขาวละเอียดมากที่เรียกว่า &quot;ทรายแก้ว&quot;
               มีป่าสนร่มรื่นสามารถมองเห็นทิวทัศน์อันงดงามของ เกาะหนูเกาะแมว
-              ดูข้อมูลเพิ่มเติม
             </span>
             <button className="home-button1 button">ดูเพิ่มเติม</button>
             <span className="home-text13">เต็ม!!!</span>
@@ -141,7 +140,7 @@ const Homepage: React.FC = (props) => {
         </div>
         <div className="home-footer"></div>
       </div>
-    </div>
+    </header>
   );
 };
 export default Homepage;
