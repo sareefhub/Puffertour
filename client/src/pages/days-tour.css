@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-.days-tour-container {
+.daystour-container {
   width: 100%;
   display: flex;
   overflow: auto;
@@ -12,7 +12,7 @@
   justify-content: flex-start;
   background-color: #e8e8e8;
 }
-.days-tour-container5 {
+.tap-bar {
   gap: var(--dl-space-space-tripleunit);
   width: 1344px;
   height: 66px;
@@ -21,142 +21,12 @@
   align-items: center;
   border-radius: var(--dl-radius-radius-radius8);
   justify-content: flex-start;
-  background-color: #c7b345;
+  background-color: black
 }
-.days-tour-form08 {
-  width: 229px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.days-tour-text02 {
-  color: var(--dl-color-gray-white);
-  font-size: 25px;
-  text-align: left;
-  font-family: Pridi;
-}
-.days-tour-container6 {
-  gap: 10em;
-  width: 100%;
-  height: 407px;
-  display: flex;
-  margin-top: 20px;
-  align-items: center;
-  justify-content: center;
-}
-.days-tour-form09 {
-  width: 333px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  border-color: var(--dl-color-gray-black);
-  border-width: 2px;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: var(--dl-color-gray-white);
-}
-.days-tour-text03 {
-  font-size: 18px;
-  font-style: normal;
-  font-family: Pridi;
-  font-weight: 700;
-}
-.days-tour-image5 {
-  width: 100%;
-  height: 149px;
-  margin-top: 15px;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-.days-tour-text06 {
-  text-align: center;
-  font-family: Pridi;
-}
-.days-tour-navlink6 {
-  width: 200px;
-  margin-top: 38px;
-  font-family: Pridi;
-  margin-bottom: 15px;
-  text-decoration: none;
-}
-.days-tour-text07 {
-  color: rgb(247, 0, 0);
-  font-family: Pridi;
-}
-.days-tour-form10 {
-  width: 333px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  border-color: var(--dl-color-gray-black);
-  border-width: 2px;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: var(--dl-color-gray-white);
-}
-.days-tour-text08 {
-  font-size: 18px;
-  font-style: normal;
-  font-family: Pridi;
-  font-weight: 700;
-}
-.days-tour-image6 {
-  width: 100%;
-  height: 149px;
-  margin-top: 15px;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-.days-tour-text09 {
-  text-align: center;
-  font-family: Pridi;
-}
-.days-tour-button {
-  width: 200px;
-  margin-top: 15px;
-  font-family: Pridi;
-  margin-bottom: 15px;
-}
-.days-tour-text10 {
-  color: rgb(247, 0, 0);
-  font-family: Pridi;
-}
-.days-tour-form11 {
-  width: 333px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  border-color: var(--dl-color-gray-black);
-  border-width: 2px;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: var(--dl-color-gray-white);
-}
-.days-tour-text11 {
-  font-size: 18px;
-  font-style: normal;
-  font-family: Pridi;
-  font-weight: 700;
-}
-.days-tour-image7 {
-  width: 100%;
-  height: 149px;
-  margin-top: 15px;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-.days-tour-text12 {
-  text-align: center;
-  font-family: Pridi;
-}
-.days-tour-button1 {
-  width: 200px;
-  margin-top: 38px;
-  font-family: Pridi;
-  margin-bottom: 15px;
-}
-.days-tour-text13 {
-  color: rgb(247, 0, 0);
+
+.text-tour {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
   font-family: Pridi;
 }
