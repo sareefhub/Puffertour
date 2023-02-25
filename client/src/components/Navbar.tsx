@@ -72,13 +72,13 @@ const Navbar: React.FC = (props) => {
             >
               ติดต่อเรา
             </a>
-            <div className="login-links">
-              <a href="/login" onClick={handleLinkClick} className="login">
-                ลงชื่อเข้าใช้
-              </a>
-              <a href="/register" onClick={handleLinkClick} className="login">
-                สมัครสมาชิก
-              </a>
+            <div className="Login">
+              <button onClick={() => navigate('/login')} >
+                  ลงชื่อเข้าใช้
+              </button>
+              <button onClick={() => navigate('/register')} >
+                  สมัครสมาชิก
+              </button>
             </div>
           </li>
         </ul>
