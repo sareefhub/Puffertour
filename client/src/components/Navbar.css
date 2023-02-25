@@ -19,25 +19,37 @@
   font-weight: bold;
 }
 
+.Logo img {
+  width: 70px;
+  height: 70px;
+  margin-top: -20px;
+}
+
+.Logo span {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: -15px;
+}
+
 .menu_container {
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 .menu_container ul li a {
   text-decoration: none;
-  margin: 10px;
-}
-
-.menu_container ul li a {
+  margin-left: 20px;
+  margin-right: 20px;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
 }
-
-.menu_container ul li.active a {
-  color: red;
-  pointer-events: none;
-}
-
 .menu_container ul li a:hover {
   color: red;
+}
+
+.login-links {
+  float: right;
+  display: flex;
+  align-items: center;
+  margin-left: 180px;
 }

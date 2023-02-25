@@ -37,29 +37,51 @@ const Navbar: React.FC = (props) => {
             <a href="/home" onClick={handleLinkClick} className="home-navlink">
               หน้าแรก
             </a>
-            <a href="/days-tour" onClick={handleLinkClick} className="home-navlink">
+            <a
+              href="/days-tour"
+              onClick={handleLinkClick}
+              className="home-navlink"
+            >
               ทัวร์รายวัน
             </a>
-            <a href="/package-tour" onClick={handleLinkClick} className="home-navlink">
+            <a
+              href="/package-tour"
+              onClick={handleLinkClick}
+              className="home-navlink"
+            >
               แพ็กเกจทัวร์
             </a>
-            <a href="/how-to-book" onClick={handleLinkClick} className="home-navlink">
+            <a
+              href="/how-to-book"
+              onClick={handleLinkClick}
+              className="home-navlink"
+            >
               วิธีการจอง
             </a>
-            <a href="/payment" onClick={handleLinkClick} className="home-navlink">
+            <a
+              href="/payment"
+              onClick={handleLinkClick}
+              className="home-navlink"
+            >
               แจ้งชำระเงิน
             </a>
-            <a href="/about-us" onClick={handleLinkClick} className="home-navlink">
+            <a
+              href="/about-us"
+              onClick={handleLinkClick}
+              className="home-navlink"
+            >
               ติดต่อเรา
             </a>
-            <a href="/login" onClick={handleLinkClick} className="home-navlink">
-              ลงชื่อเข้าใช้
-            </a>
-            <a href="/register" onClick={handleLinkClick} className="home-navlink">
-              สมัครสมาชิก
-            </a>
+            <div className="login-links">
+              <a href="/login" onClick={handleLinkClick} className="login">
+                ลงชื่อเข้าใช้
+              </a>
+              <a href="/register" onClick={handleLinkClick} className="login">
+                สมัครสมาชิก
+              </a>
+            </div>
           </li>
-        </ul>   
+        </ul>
       </div>
     </header>
   );
