@@ -72,10 +72,10 @@ body {
 
 .btn {
   padding: 12px 24px;
-  margin-left: 130px;
+  margin-left: 13px;
   font-size: 16px;
   border: none;
-  border-radius: 10px;
+  border-radius: 4px;
   background-color: #333;
   color: #fff;
   text-transform: uppercase;
@@ -89,6 +89,5 @@ body {
 }
 
 .text-footer {
-  margin-top: 10px;
-  margin-left: 100px;
+  margin: 40px;
 }
