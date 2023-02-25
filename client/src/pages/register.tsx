@@ -101,8 +101,8 @@ const Register: React.FC = () => {
                 />
               </div>
               <input type="submit" className="btn" value="ยืนยัน" />
-            </form>
               <text onClick={() => navigate('/login')} style={{ textDecoration: 'underline' }} className="text-footer">มีบัญชีแล้ว? เข้าสู่ระบบ</text>
+            </form>
           </div>
         </div>
       </div>
