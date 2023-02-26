@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "attractions",
+  "collectionName": "one_days",
   "info": {
-    "singularName": "attraction",
-    "pluralName": "attractions",
-    "displayName": "Attraction",
+    "singularName": "one-day",
+    "pluralName": "one-days",
+    "displayName": "One-day",
     "description": ""
   },
   "options": {
@@ -14,7 +14,7 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "description": {
       "type": "text"
@@ -30,17 +30,6 @@
         "audios"
       ]
     },
-    "illustrations": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "tour_program": {
       "type": "text"
     },
@@ -48,13 +37,7 @@
       "type": "text"
     },
     "price": {
-      "type": "decimal"
-    },
-    "reviews": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::review.review",
-      "mappedBy": "Attraction"
+      "type": "string"
     },
     "remaining": {
       "type": "integer"
