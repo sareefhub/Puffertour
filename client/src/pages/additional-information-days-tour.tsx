@@ -1,14 +1,34 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom";
-
-import Navbar from '../components/Navbar';
-import Picture from '../components/picture';
+import { useNavigate,useParams } from "react-router-dom"
+import Navbar from '../components/Navbar'
+import Picture from '../components/picture'
+import OneDayTour from "../models/OneDay"
+import { useState, useEffect } from "react"
+import Repository from '../repositories'
 
 import './additional-information-days-tour.css'
 
-const AdditionalInformationDaysTour: React.FC = (props) => {
-    const navigate = useNavigate();
+const AdditionalInformationDaysTour = () => {
+  const [DataTour, setDataTour] = useState<OneDayTour[]>([])
+  const navigate = useNavigate();
+  const params = useParams();
 
+  const fetchData = async () => {
+    try {
+        const result = await Repository.Tourdata.get(params.id as string);
+        if(result) {
+          setDataTour(result)
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+useEffect(() => {
+    fetchData()
+}, [params.id])
+
+  const tour = DataTour.length > 0 ? DataTour[0].attributes : null;
   return (
     <div className="additional-information-days-tour-container">
       <Navbar/>
@@ -16,14 +36,14 @@ const AdditionalInformationDaysTour: React.FC = (props) => {
       <div className="additional-information-days-tour-container05">
         <form className="additional-information-days-tour-form08">
           <span className="additional-information-days-tour-text02">
-            ย่านเมืองเก่าสงขลา
+            {tour?.name}
           </span>
         </form>
       </div>
       <div className="additional-information-days-tour-container06">
         <form className="additional-information-days-tour-form09">
           <span className="additional-information-days-tour-text03">
-            โปรแกรมทัวร์ย่านเมืองเก่าสงขลา
+            โปรแกรมทัวร์{tour?.name}
           </span>
         </form>
         <form className="additional-information-days-tour-form10">
@@ -34,54 +54,15 @@ const AdditionalInformationDaysTour: React.FC = (props) => {
       </div>
       <div className="additional-information-days-tour-container07">
         <form className="additional-information-days-tour-form11">
-          <span className="additional-information-days-tour-text05">
-            <span>
-              08.30 น. รถรับท่านเดินทาง สู่ย่านเมืองเก่าสงขลา
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
-            <br></br>
-            <span>
-              09.00 น. พาชมเมืองเก่าสงขลา
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
-            <br></br>
-            <span>
-              12.00 น. พักรับประทานอาหารเที่ยงบนเกาะ
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
-            <br></br>
-            <span>
-              13.30 น. พาชมเมืองเก่าสงขลาต่อ
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
-            <br></br>
-            <span>
-              14.00 น. ส่งท่านกลับที่พักโดยสวัสดิภาพ สิ้นสุด one day trip
-              ย่านเมืองเก่าสงขลา
-            </span>
-          </span>
+          <p className="additional-information-days-tour-text05">
+            {tour?.tour_program}
+          </p>
         </form>
         <div className="additional-information-days-tour-container08">
           <form className="additional-information-days-tour-form12">
             <form className="additional-information-days-tour-form13">
               <span className="additional-information-days-tour-text15">
-                ราคา 500 บาท/คน
+                ราคา {tour?.price} บาท/คน
               </span>
             </form>
             <form className="additional-information-days-tour-form14">
@@ -99,7 +80,7 @@ const AdditionalInformationDaysTour: React.FC = (props) => {
       <div className="additional-information-days-tour-container09">
         <form className="additional-information-days-tour-form15">
           <span className="additional-information-days-tour-text22">
-            สิ่งที่รวมในทัวร์ย่านเมืองเก่าสงขลา
+            สิ่งที่รวมในทัวร์{tour?.name}
           </span>
         </form>
         <form className="additional-information-days-tour-form16">
@@ -111,24 +92,7 @@ const AdditionalInformationDaysTour: React.FC = (props) => {
       <div className="additional-information-days-tour-container10">
         <form className="additional-information-days-tour-form17">
           <span className="additional-information-days-tour-text24">
-            <span>
-              - รถรับ - ส่ง
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
-            <br></br>
-            <span>- ผลไม้ , เกาลัดเจ๊จู</span>
-            <br></br>
-            <span>- ประกันภัยนักท่องเที่ยว</span>
-            <br></br>
-            <span>- อาหารกลางวันแบบปิกนิค</span>
-            <br></br>
-            <span>- มัคคุเทศก์ชำนาญงาน</span>
-            <br></br>
-            <span>- น้ำดื่ม , น้ำแข็ง</span>
+            {tour?.service}
           </span>
         </form>
         <form className="additional-information-days-tour-form18">
