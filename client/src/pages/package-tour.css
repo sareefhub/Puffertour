@@ -1,36 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .package-tour-container {
-    width: 100%;
-    display: flex;
-    overflow: auto;
-    min-height: 100vh;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: #E8E8E8;
-  }
-  .tap-bar {
-    gap: var(--dl-space-space-tripleunit);
-    width: 1344px;
-    height: 66px;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    border-radius: var(--dl-radius-radius-radius8);
-    justify-content: flex-start;
-    background-color: black
-  }
-  
-  .text-tour {
-    color: white;
-    font-size: 20px;
-    margin-left: 20px;
-    font-family: Pridi;
-  }
-  
-  .days-tour-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #e8e8e8;
+}
+.tap-bar {
+  gap: var(--dl-space-space-tripleunit);
+  width: 1344px;
+  height: 66px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  border-radius: var(--dl-radius-radius-radius8);
+  justify-content: flex-start;
+  background-color: black
+}
+
+.text-tour {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+  font-family: Pridi;
+}
+
+.packages-tour-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
