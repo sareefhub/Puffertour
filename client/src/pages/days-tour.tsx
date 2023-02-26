@@ -2,17 +2,16 @@ import Navbar from "../components/Navbar";
 import Picture from "../components/picture";
 import "./days-tour.css";
 import Card from "../components/OneDayCard";
-import { OneDayRepository } from "../repositories/OneDayRepository";
 import OneDayTour from "../models/OneDay";
 import { useState, useEffect } from "react";
-import { Grid, Box } from '@mui/material';
+import { Grid } from '@mui/material';
+import Repository from '../repositories';
 
 
 const DaysTour = () => {
   const [DataTour, setDataTour] = useState<OneDayTour[]>([]);
   const fetchData = async () => {
-    const repo = new OneDayRepository();
-    const result = await repo.getAll()
+    const result = await Repository.Tourdata.getAll()
     if(result) {
       setDataTour(result)
     }

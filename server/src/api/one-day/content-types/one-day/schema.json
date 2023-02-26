@@ -41,6 +41,12 @@
     },
     "remaining": {
       "type": "integer"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "one_day"
     }
   }
 }

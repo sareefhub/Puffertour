@@ -34,6 +34,15 @@
     "payment_date": {
       "type": "datetime",
       "required": true
+    },
+    "payment_status": {
+      "type": "enumeration",
+      "enum": [
+        "reserved",
+        "notCheck",
+        "nothing"
+      ],
+      "default": "nothing"
     }
   }
 }
