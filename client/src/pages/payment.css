@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .payment-container {
     width: 100%;
     display: flex;
@@ -75,6 +80,7 @@
     font-size: 20px;
     text-align: left;
     font-family: Pridi;
+    color: #927357;
   }
   .payment-container05 {
     width: 100%;
@@ -114,117 +120,76 @@
     flex-direction: column;
     justify-content: flex-start;
   }
-  .payment-text04 {
-    height: var(--dl-size-size-tripleunit);
-    font-family: Pridi;
-  }
-  .payment-text27 {
+
+  .promptpay {
+    margin-top: 10px;
     width: auto;
     height: var(--dl-size-size-tripleunit);
     font-family: Pridi;
   }
-  .payment-text28 {
-    height: var(--dl-size-size-tripleunit);
-    font-family: Pridi;
-  }
-  .payment-container07 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .payment-container08 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .payment-container09 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .payment-container10 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .payment-container11 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .payment-text29 {
-    height: 100%;
-    font-family: Pridi;
-  }
-  .payment-select {
-    height: 10%;
-  }
-  .payment-text30 {
-    height: 10%;
-  }
-  .payment-select1 {
-    height: 10%;
-  }
-  .payment-text31 {
-    height: var(--dl-size-size-tripleunit);
-  }
-  .payment-container12 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .payment-text32 {
-    height: var(--dl-size-size-tripleunit);
-    font-family: Pridi;
-  }
-  .payment-textinput {
-    height: 32px;
-    font-family: Pridi;
-  }
-  .payment-container13 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .payment-container14 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .payment-text33 {
-    width: auto;
-    height: var(--dl-size-size-tripleunit);
-    font-family: Pridi;
-  }
-  .payment-textinput1 {
-    height: 31px;
-    font-family: Pridi;
-  }
-  .payment-text34 {
+
+  .limit-file {
     color: rgb(255, 0, 0);
     font-family: Pridi;
   }
+
+  .button {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #4f4f4f;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 19px;
+    color: black;
+    z-index: 1;
+   }
+   
+   .button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+   }
+   
+   .button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #39bda7;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+   }
+   
+   .button:hover {
+    color: #ffffff;
+    border: 1px solid #39bda7;
+   }
+   
+   .button:hover:before {
+    top: -35%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+   }
+   
+   .button:hover:after {
+    top: -45%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+   }

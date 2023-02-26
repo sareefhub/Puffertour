@@ -1,9 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-
 import Navbar from '../components/Navbar'
-
-//10-98
+import Swal from 'sweetalert2';
 import './payment.css'
 
 const Payment:React.FC  = (props) => {
@@ -40,86 +38,56 @@ const Payment:React.FC  = (props) => {
             className="payment-image2"
           />
         </form>
-        <div className="payment-container06">
-          <h1 className="payment-text04">
-            <span>รายละเอียดการโอนเงิน</span>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-          </h1>
-          <span className="payment-text27">
-            บัญชีที่โอนเงิน :  พร้อมเพย์ 093-xxxxx7-0 นายอดิเทพ แบบเหมือน
-          </span>
-          <span className="payment-text28">วันที่ชำระเงิน : 2023-02-10</span>
-          <div className="payment-container07">
-            <div className="payment-container08">
-              <div className="payment-container09">
-                <div className="payment-container10">
-                  <div className="payment-container11">
-                    <span className="payment-text29">เวลา (โดยประมาณ) :  </span>
-                    <select className="payment-select">
-                      <option value="Option 1">Option 1</option>
-                      <option value="Option 2">Option 2</option>
-                      <option value="Option 3">Option 3</option>
-                    </select>
-                  </div>
-                  <span className="payment-text30"> : </span>
-                </div>
-              </div>
-              <select className="payment-select1">
-                <option value="Option 1">Option 1</option>
-                <option value="Option 2">Option 2</option>
-                <option value="Option 3">Option 3</option>
-              </select>
-            </div>
-            <span className="payment-text31"> น.</span>
-          </div>
-          <div className="payment-container12">
-            <span className="payment-text32">จำนวนเงิน : </span>
-            <input
-              type="text"
-              placeholder="                                 บาท"
-              className="payment-textinput input"
-            />
-          </div>
-          <div className="payment-container13">
-            <div className="payment-container14">
-              <span className="payment-text33">หลักฐานการโอน :  </span>
-            </div>
-            <input type="text" className="payment-textinput1 input" />
-          </div>
-          <span className="payment-text34">
-            <span>
-              การแนบหลักฐานจะช่วยทำให้ตรวจสอบได้เร็วขึ้น
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
-            <br></br>
-            <span>[ ไฟล์ jpg,gif,png,pdf ไม่เกิน2MB ]</span>
-          </span>
+      <div className="payment-container06">
+        <h1 className="payment-text04">
+          <text>รายละเอียดการโอนเงิน</text>
+        </h1>
+        <text className="promptpay">
+          ธนาคารกสิกรไทย : หมายเลขบัญชี 141-x-xxxxx-0
+        </text>
+        <text className="promptpay">
+          บัญชีที่โอนเงิน : พร้อมเพย์ 093-xxxxx7-0 
+        </text>
+        <text className="promptpay">
+          ชื่อบัญชี บริษัท Puffertour
+        </text>
+        <text className="promptpay">
+        กรุณาแนบไฟล์สลิปการโอนเงิน
+        </text>
+          <input
+            type="file"
+            accept="image/*,.pdf"
+            onChange={async (e) => {
+              const { value: file } = await Swal.fire({
+                title: 'Select image',
+                input: 'file',
+                inputAttributes: {
+                  'accept': 'image/*',
+                  'aria-label': 'Upload your profile picture'
+                }
+              })
+              
+              if (file) {
+                const reader = new FileReader()
+                reader.onload = (e) => {
+                  if (e.target && e.target.result) { // add null check
+                    Swal.fire({
+                      title: 'Your uploaded picture',
+                      imageUrl: e.target.result.toString(),
+                      imageAlt: 'The uploaded picture'
+                    })
+                  }
+                }
+                reader.readAsDataURL(file)
+              }
+            }}
+          />
+          <div className="limit-file">
+            <text>[ ไฟล์ jpg,gif,png,pdf ไม่เกิน2MB ]</text>
         </div>
+        <button className="button"> ยืนยันการส่ง </button>
       </div>
+    </div>
     </div>
   )
 }
