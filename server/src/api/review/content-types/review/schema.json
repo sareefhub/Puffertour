@@ -23,6 +23,12 @@
       "relation": "manyToOne",
       "target": "api::attraction.attraction",
       "inversedBy": "reviews"
+    },
+    "one_day": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::one-day.one-day",
+      "inversedBy": "reviews"
     }
   }
 }
