@@ -3,7 +3,7 @@ import Package from '../models/Package'
 
 
 export class PackageRepository implements IRepository<Package>{
-    urlPrefix = "http://localhost:1337/api/attractions"
+    urlPrefix = "http://localhost:1337/api/attractions?populate=*"
 
     async get(id: string): Promise<Package[] | null> {
         const resp = await fetch(`${this.urlPrefix}&filters[id][$eq]=${id}`)
