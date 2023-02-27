@@ -25,6 +25,14 @@ const Navbar: React.FC = (props) => {
     });
   }, [activeLink]);
 
+  const CheckUserToken = () => {
+    const checktoken = localStorage.getItem("token");
+    if (checktoken) {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <header className="navbar_container">
       <div className="Logo">
@@ -72,14 +80,21 @@ const Navbar: React.FC = (props) => {
             >
               ติดต่อเรา
             </a>
-            <div className="Login">
-              <button onClick={() => navigate('/login')} >
+            {CheckUserToken() && (
+              <a className="Profileuser">
+                <img src="./pictures/Profileuser.png" alt="" />
+              </a>
+            )}
+            {!CheckUserToken() && (
+              <div className="Login">
+                <button onClick={() => navigate("/login")}>
                   ลงชื่อเข้าใช้
-              </button>
-              <button onClick={() => navigate('/register')} >
+                </button>
+                <button onClick={() => navigate("/register")}>
                   สมัครสมาชิก
-              </button>
-            </div>
+                </button>
+              </div>
+            )}
           </li>
         </ul>
       </div>
