@@ -14,19 +14,15 @@ const AdditionalInformationPackageTour = () => {
   const params = useParams();
 
   const fetchData = async () => {
-    try {
-        const result = await Repository.Packagedata.get(params.id as string);
-        if(result) {
-          setDataTour(result)
-        }
-    } catch (error) {
-        console.log(error)
+    const result = await Repository.Packagedata.get(params.id as string);
+    if(result) {
+      setDataTour(result)
     }
-}
+  }
 
-useEffect(() => {
+  useEffect(() => {
     fetchData()
-}, [params.id])
+  }, [params.id])
 
   const tour = DataTour.length > 0 ? DataTour[0].attributes : null;
   return (
