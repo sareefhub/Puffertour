@@ -6,7 +6,7 @@ import Packagetour from '../models/Package'
 import { useState, useEffect } from "react"
 import Repository from '../repositories'
 
-import './additional-information-days-tour.css'
+import './additional-information-package-tour.css'
 
 const AdditionalInformationPackageTour = () => {
   const [DataTour, setDataTour] = useState<Packagetour[]>([])
@@ -29,7 +29,6 @@ useEffect(() => {
 }, [params.id])
 
   const tour = DataTour.length > 0 ? DataTour[0].attributes : null;
-    
   return (
     <div className="additional-information-package-tour-container">
       <Navbar/>
@@ -56,9 +55,9 @@ useEffect(() => {
         <div className="additional-information-package-tour-container08">
           <div className="additional-information-package-tour-container09">
             <form className="additional-information-package-tour-form11">
-              <span className="additional-information-package-tour-text05">
+              <p className="additional-information-package-tour-text05">
               {tour?.tour_program}
-              </span>
+              </p>
             </form>
           </div>
           <div className="additional-information-package-tour-container10">
