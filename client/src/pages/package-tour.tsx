@@ -22,17 +22,19 @@ const PackagesTour = () => {
   }, [])
 
   return (
-    <div className="package-tour-container" >
-        <Navbar />
-        <Picture />
+    <div className="daystour-container" >
+      <Navbar />
+      <Picture />
       <div className="tap-bar">
-          <span className="text-tour">แพ็คเกจทัวร์</span>
+        <span className="text-tour">แพ็คเกจทัวร์</span>
       </div>
-        {DataTour.map((item, index) =>
-        <Grid item xs={2} sm={4} md={4} lg={3} xl={2} key={index}>
-          <Card Tour={item}/>
-        </Grid>
-      )}
+      <Grid container spacing={2} justifyContent="center">
+        {DataTour.map((item, index) => (
+          <Grid item key={index}>
+            <Card Tour={item}/>
+          </Grid>
+        ))}
+      </Grid>
     </div>
   )
   }
