@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Picture from "../components/picture";
-import "./package-tour";
+import "./package-tour.css";
 import Card from "../components/PackageCard";
 import Packagetour from "../models/Package";
 import { useState, useEffect } from "react";
@@ -22,7 +22,7 @@ const PackagesTour = () => {
   }, [])
 
   return (
-    <div className="daystour-container" >
+    <div className="package-tour-container" >
       <Navbar />
       <Picture />
       <div className="tap-bar">
