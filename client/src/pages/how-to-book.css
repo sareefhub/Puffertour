@@ -8,29 +8,10 @@
     flex-direction: column;
     background-color: #E8E8E8;
   }
-  .how-to-book-container5 {
-    gap: var(--dl-space-space-tripleunit);
-    width: 1344px;
-    height: 66px;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    border-radius: var(--dl-radius-radius-radius8);
-    justify-content: flex-start;
-    background-color: #c7b345;
-  }
   .how-to-book-form08 {
     width: 229px;
     height: 42px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .how-to-book-text1 {
-    color: var(--dl-color-gray-white);
-    font-size: 25px;
-    text-align: left;
-    font-family: Pridi;
   }
   .how-to-book-container6 {
     width: 1372px;
