@@ -13,11 +13,9 @@ const HowToBook: React.FC = (props) => {
     <div className="how-to-book-container">
         <Navbar />
         <Picture/>
-      <div className="how-to-book-container5">
-        <form className="how-to-book-form08">
-          <span className="how-to-book-text1">วิธีการจอง</span>
-        </form>
-      </div>
+        <div className="tap-bar">
+          <span className="text-tour">วิธีการจอง</span>
+        </div>
       <div className="how-to-book-container6">
         <form className="how-to-book-form09">
           <span className="how-to-book-text2">
