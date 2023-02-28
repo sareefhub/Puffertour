@@ -7,38 +7,6 @@
     flex-direction: column;
     background-color: #E8E8E8;
   }
-  .about-us-container05 {
-    gap: var(--dl-space-space-halfunit);
-    width: 1344px;
-    height: 55px;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    border-radius: var(--dl-radius-radius-radius8);
-    margin-bottom: 37px;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: #c7b345;
-  }
-  .about-us-form08 {
-    gap: var(--dl-space-space-halfunit);
-    width: 149px;
-    height: 43px;
-    display: flex;
-    position: relative;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .about-us-text02 {
-    color: var(--dl-color-gray-white);
-    font-size: 20px;
-    align-self: center;
-    font-style: normal;
-    text-align: left;
-    font-family: Pridi;
-    font-weight: 400;
-  }
   .about-us-container06 {
     flex: 0;
     width: 1475px;

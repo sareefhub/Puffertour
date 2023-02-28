@@ -9,10 +9,8 @@ const AboutUs:React.FC = (props) => {
     <div className="about-us-container">
       <Navbar/>
       <Picture/>
-      <div className="about-us-container05">
-        <form className="about-us-form08">
-          <span className="about-us-text02">เกี่ยวกับเรา</span>
-        </form>
+      <div className="tap-bar">
+          <span className="text-tour">ติดต่อเรา</span>
       </div>
       <div className="about-us-container06">
         <div className="about-us-container07">
