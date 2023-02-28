@@ -1,12 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Swal from 'sweetalert2';
 import './payment.css'
 
-const Payment:React.FC  = (props) => {
-    const navigate = useNavigate();
-    
+const Payment: React.FC = (props) => {
+  const navigate = useNavigate();
+  const [file, setFile] = useState<File | null>(null);
+
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedFile = e.target.files && e.target.files[0];
+    if (selectedFile) {
+      if (selectedFile.size > 2 * 1024 * 1024) {
+        Swal.fire({
+          title: 'File too large',
+          text: 'Please select a file that is no more than 2 MB in size.',
+          icon: 'error'
+        })
+        return;
+      }
+      const { value: file } = await Swal.fire({
+        title: 'Select image',
+        input: 'file',
+        inputAttributes: {
+          'accept': 'image/*',
+          'aria-label': 'Upload your profile picture'
+        }
+      })
+      if (file) {
+        setFile(file);
+        const reader = new FileReader()
+        reader.onload = (e) => {
+          if (e.target && e.target.result) { // add null check
+            Swal.fire({
+              title: 'Your uploaded picture',
+              imageUrl: e.target.result.toString(),
+              imageAlt: 'The uploaded picture'
+            })
+          }
+        }
+        reader.readAsDataURL(file)
+      }
+    }
+  }  
+
   return (
     <div className="payment-container"> 
       <Navbar/>
@@ -54,35 +91,8 @@ const Payment:React.FC  = (props) => {
         <text className="promptpay">
         กรุณาแนบไฟล์สลิปการโอนเงิน
         </text>
-          <input
-            type="file"
-            accept="image/*,.pdf"
-            onChange={async (e) => {
-              const { value: file } = await Swal.fire({
-                title: 'Select image',
-                input: 'file',
-                inputAttributes: {
-                  'accept': 'image/*',
-                  'aria-label': 'Upload your profile picture'
-                }
-              })
-              
-              if (file) {
-                const reader = new FileReader()
-                reader.onload = (e) => {
-                  if (e.target && e.target.result) { // add null check
-                    Swal.fire({
-                      title: 'Your uploaded picture',
-                      imageUrl: e.target.result.toString(),
-                      imageAlt: 'The uploaded picture'
-                    })
-                  }
-                }
-                reader.readAsDataURL(file)
-              }
-            }}
-          />
-          <div className="limit-file">
+          <input type="file" accept="image/*,.pdf" onChange={handleFileChange}/>
+        <div className="limit-file"> 
             <text>[ ไฟล์ jpg,gif,png,pdf ไม่เกิน2MB ]</text>
         </div>
         <button className="button"> ยืนยันการส่ง </button>
