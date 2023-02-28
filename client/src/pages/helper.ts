@@ -1,21 +1,11 @@
-import React ,{ useEffect } from "react"
-import { useNavigate } from "react-router-dom"
-
-export const storeUser = (data:any) => {
-    localStorage.setItem(
-        'user', 
-        JSON.stringify({
-            username: data.user.username,
-            jwt: data.jwt,
-        })
-    )
-}
-
-export const userData = () => {
-    const stringfiedUser = localStorage.getItem('user') || ""
+export const storeUser = (data: any) => {
+    localStorage.setItem('username', data.user.username);
+    localStorage.setItem('token', data.jwt);
+  };
+export const getUserData = () => {
+    const stringfiedUser = localStorage.getItem('username') || ""
     if (stringfiedUser) {
         return JSON.parse(stringfiedUser)
     }
     return false
 }
-

@@ -6,6 +6,8 @@ import "./Navbar.css";
 const Navbar: React.FC = (props) => {
   const navigate = useNavigate();
   const [activeLink, setActiveLink] = useState("");
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false); // added state for dropdown visibility
+  const [username, setUsername] = useState(""); // added state for username
 
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const clickedLink = event.currentTarget;
@@ -27,10 +29,21 @@ const Navbar: React.FC = (props) => {
 
   const CheckUserToken = () => {
     const checktoken = localStorage.getItem("token");
+    const CheckUserToken = localStorage.getItem("username");
     if (checktoken) {
       return true;
     }
     return false;
+  };
+
+  const handleProfileClick = () => {
+    setIsDropdownVisible(!isDropdownVisible);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token"); // remove token from local storage
+    localStorage.removeItem("username"); // remove username from local storage
+    navigate("/home"); // navigate to login page
   };
 
   return (
@@ -81,9 +94,21 @@ const Navbar: React.FC = (props) => {
               ติดต่อเรา
             </a>
             {CheckUserToken() && (
-              <a className="Profileuser">
-                <img src="./pictures/Profileuser.png" alt="" />
-              </a>
+              <div className="action">
+                <div className="Profileuser" onClick={handleProfileClick}>
+                  <img src="./pictures/Profileuser.png" alt="" />
+                  <span>{username}</span> {/* added username display */}
+                </div>
+                {isDropdownVisible && (
+                  <div className="dropdown">
+                    <a href="#">ข้อมูลส่วนตัว</a>
+                    <a href="#">ประวัติการจอง</a>
+                    <a href="#" onClick={handleLogout}>
+                      ออกจากระบบ
+                    </a>
+                  </div>
+                )}
+              </div>
             )}
             {!CheckUserToken() && (
               <div className="Login">
