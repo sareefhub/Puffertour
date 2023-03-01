@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .bookcontainer{
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #e8e8e8;
+  }
+  .header{
+    font-size: smaller;
+    align-items: center;
+    margin-top: 100px;
+  }
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 60%;
+    height: 400px;
+    table-layout: auto;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }

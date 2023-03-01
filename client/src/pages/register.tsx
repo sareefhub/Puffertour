@@ -48,7 +48,6 @@ const Register: React.FC = () => {
   
 
   return (
-    <div className="body">
       <div className="container">
         <div className="card">
           <div className="card-header">
@@ -106,7 +105,6 @@ const Register: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
