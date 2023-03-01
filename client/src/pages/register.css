@@ -3,14 +3,11 @@
   padding: 0;
 }
 
-body {
+.container {
   background-image: url('https://www.paiduaykan.com/travel/wp-content/uploads/2019/03/DSC_1580-800x536.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-.container {
   display: flex;
   justify-content: center; 
   align-items: center; 
