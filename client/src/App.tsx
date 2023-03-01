@@ -11,6 +11,7 @@ import HowToBook from './pages/how-to-book';
 import PayMent from './pages/payment';
 import AboutUs from './pages/about-us';
 import './style.css';
+import UserProfile from './pages/userProfile';
 
 function App () {
   return (
@@ -27,6 +28,7 @@ function App () {
           <Route path='/how-to-book' element={<HowToBook/>}/>
           <Route path='/payment' element={<PayMent/>}/>
           <Route path='/about-us' element={<AboutUs/>}/>
+          <Route path='/userProfile' element={<UserProfile/>}/>
         </Routes>
     </BrowserRouter>
   );
