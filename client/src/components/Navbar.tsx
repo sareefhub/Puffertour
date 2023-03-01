@@ -102,8 +102,8 @@ const Navbar: React.FC = (props) => {
                 {isDropdownVisible && (
                   <div className="dropdown">
                     <a href="/userProfile" >ข้อมูลส่วนตัว</a>
-                    <a href="#">ประวัติการจอง</a>
-                    <a href="#" onClick={handleLogout}>
+                    <a href="/booking-history">ประวัติการจอง</a>
+                    <a href="/home" onClick={handleLogout}>
                       ออกจากระบบ
                     </a>
                   </div>

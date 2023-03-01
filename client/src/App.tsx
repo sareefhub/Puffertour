@@ -12,6 +12,7 @@ import PayMent from './pages/payment';
 import AboutUs from './pages/about-us';
 import './style.css';
 import UserProfile from './pages/userProfile';
+import Booking from './pages/booking-history';
 
 function App () {
   return (
@@ -29,6 +30,7 @@ function App () {
           <Route path='/payment' element={<PayMent/>}/>
           <Route path='/about-us' element={<AboutUs/>}/>
           <Route path='/userProfile' element={<UserProfile/>}/>
+          <Route path='/booking-history' element={<Booking/>}/>
         </Routes>
     </BrowserRouter>
   );
