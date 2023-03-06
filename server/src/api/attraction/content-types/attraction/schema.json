@@ -30,17 +30,6 @@
         "audios"
       ]
     },
-    "illustrations": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "tour_program": {
       "type": "text"
     },
@@ -50,14 +39,14 @@
     "price": {
       "type": "decimal"
     },
-    "reviews": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::review.review",
-      "mappedBy": "Attraction"
-    },
     "remaining": {
       "type": "integer"
+    },
+    "review": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::review.review",
+      "mappedBy": "package_tour"
     }
   }
 }
