@@ -30,6 +30,7 @@
     font-size: 25px;
     text-align: left;
     font-family: Pridi;
+    /**/
   }
   .additional-information-days-tour-container06 {
     width: 100%;
@@ -52,6 +53,7 @@
     font-style: normal;
     font-family: Pridi;
     font-weight: 700;
+    white-space: nowrap;
   }
   .additional-information-days-tour-form10 {
     width: 200px;
@@ -171,6 +173,7 @@
     font-style: normal;
     font-family: Pridi;
     font-weight: 700;
+    white-space: nowrap;
   }
   .additional-information-days-tour-form16 {
     width: 200px;
