@@ -47,17 +47,6 @@
       "relation": "oneToMany",
       "target": "api::review.review",
       "mappedBy": "one_day"
-    },
-    "illustration": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     }
   }
 }
