@@ -12,37 +12,32 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "payment_image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "user_id": {
-      "type": "string",
-      "required": true
-    },
-    "amount": {
-      "type": "decimal",
-      "required": true
-    },
-    "payment_date": {
-      "type": "datetime",
-      "required": true
-    },
-    "payment_status": {
+    "status": {
       "type": "enumeration",
       "enum": [
         "reserved",
         "notCheck",
-        "nothing"
+        "finish"
       ],
-      "default": "nothing"
+      "default": "reserved"
+    },
+    "user": {
+      "type": "string"
+    },
+    "tour_name": {
+      "type": "string"
+    },
+    "tour_start": {
+      "type": "date"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "total_price": {
+      "type": "integer"
+    },
+    "tour_id": {
+      "type": "string"
     }
   }
 }
