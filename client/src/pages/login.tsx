@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { storeUser } from "./helper";
+import { storeUser } from "../helper";
 
 import "./login.css";
 
