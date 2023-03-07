@@ -72,7 +72,9 @@ const AdditionalInformationDaysTour = () => {
   }
 
   const handleReservation = async () => {
-    if (!bookingDate) {
+    if (!user) {
+      navigate('/login');
+    } else if (!bookingDate) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
