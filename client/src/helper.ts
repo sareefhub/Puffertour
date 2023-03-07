@@ -1,17 +1,16 @@
-export const storeUser = (data: any) => {
-    localStorage.setItem('username', data.user.username);
-    localStorage.setItem('email', data.user.email);
-    localStorage.setItem('token', data.jwt);
-  };
-export const getUserData = () => {
-    const stringfiedUser = localStorage.getItem('username') || ""
-    if (stringfiedUser) {
-        return JSON.parse(stringfiedUser)
-    }
-    return false
+export const storeUser = (data:any) => {
+    localStorage.setItem(
+        'user',
+        JSON.stringify({
+            username: data.user.username,
+            email: data.user.email,
+            jwt: data.jwt,
+        })
+    )
 }
-export const getEmailData = () => {
-    const stringfiedUser = localStorage.getItem('email') || ""
+
+export const getUserData = () => {
+    const stringfiedUser = localStorage.getItem('user') || ""
     if (stringfiedUser) {
         return JSON.parse(stringfiedUser)
     }

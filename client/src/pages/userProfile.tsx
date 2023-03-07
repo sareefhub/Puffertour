@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { TextField, Grid } from '@mui/material';
-
+import { getUserData } from '../helper';
 import './userProfile.css';
 
 const UserProfile:React.FC = (props) => {
-  const [userData, setUserData] = useState({ username: '', email: '' });
+  const user = getUserData()
+  const [username , setUsername] = useState({userdata: ''})
 
   useEffect(() => {
-    const username = localStorage.getItem('username') || '';
-    const email = localStorage.getItem('email') || '';
-    setUserData({ username, email });
+    const userdata = localStorage.getItem('user') || '';
   }, []);
 
   return (
@@ -20,7 +19,7 @@ const UserProfile:React.FC = (props) => {
         <div className="cardd">
           <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" className="rounded-circle" width="150" />
           <div className="user-name">
-            <h4>{userData.username}</h4>
+            <h4>{user.username}</h4>
           </div>
         </div>
       </div>
@@ -35,7 +34,7 @@ const UserProfile:React.FC = (props) => {
                 id="username"
                 label="ชื่อบัญชีผู้ใช้งาน"
                 autoFocus
-                value={userData.username}
+                value={user.username}
                 disabled
               />
             </Grid>
@@ -47,7 +46,7 @@ const UserProfile:React.FC = (props) => {
                 id="email"
                 label="อีเมล"
                 autoFocus
-                value={userData.email}
+                value={user.email}
                 disabled
               />
             </Grid>
