@@ -14,24 +14,6 @@
   "attributes": {
     "review": {
       "type": "text"
-    },
-    "package_tour": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::attraction.attraction",
-      "inversedBy": "review"
-    },
-    "one_day": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::one-day.one-day",
-      "inversedBy": "reviews"
-    },
-    "Reviewer": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "review"
     }
   }
 }
