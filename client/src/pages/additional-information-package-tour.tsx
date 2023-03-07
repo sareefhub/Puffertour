@@ -1,14 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Picture from "../components/picture";
 import Packagetour from "../models/Package";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Repository from "../repositories";
-
 import "./additional-information-package-tour.css";
+import Swal from "sweetalert2";
 
 const AdditionalInformationPackageTour = () => {
+  const [bookingDate, setBookingDate] = useState<string>("");
+  const [numPeople, setNumPeople] = useState<number>(1);
   const [DataTour, setDataTour] = useState<Packagetour[]>([]);
   const navigate = useNavigate();
   const params = useParams();
@@ -25,6 +27,29 @@ const AdditionalInformationPackageTour = () => {
   }, [params.id]);
 
   const tour = DataTour.length > 0 ? DataTour[0].attributes : null;
+
+  const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setBookingDate(event.target.value);
+  };
+
+  const handleNumPeopleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNumPeople(parseInt(event.target.value));
+  };
+
+  const handleReservation = () => {
+    // Check if all information is filled out
+    if (bookingDate.length === 0 || numPeople < 1) {
+      // If not, show SweetAlert error message
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please fill out all information before making a reservation",
+      });
+    } else {
+      // Handle the reservation logic here
+      navigate("/payment");
+    }
+  };
   return (
     <div className="information-package-tour-container">
       <Navbar />
@@ -40,23 +65,49 @@ const AdditionalInformationPackageTour = () => {
           </div>
         </div>
         <div className="information-package-tour-container4">
+        <h2>สิ่งที่รวมในทัวร์{tour?.name}</h2>
+          <div className="information-package-tour-container6">
+            <p>{tour?.service}</p>
+          </div>
           <h2>จองทัวร์</h2>
           <div className="information-package-tour-container5">
-            <span className="Text">ราคา {tour?.price} บาท/คน</span>
+          <span className="Text">ราคา {tour?.price} บาท/คน</span>
+          <form>
+            <label htmlFor="Tourday" className="Tourday">
+              วันเดินทาง:
+            </label>
+            <input
+              type="date"
+              id="tourstart"
+              name="tourstart"
+              className="date-input"
+              value={bookingDate}
+              onChange={handleDateChange}
+            />
+            </form>
+            <label htmlFor="numPeople" className="Tourday">
+              จำนวนผู้เข้าร่วมทัวร์:
+            </label>
+            <input
+              type="number"
+              id="numPeople"
+              name="numPeople"
+              className="input"
+              value={numPeople}
+              onChange={handleNumPeopleChange}
+            />
+            <span className="Text2">ราคารวม 10000 บาท</span>
             <button
               className="information-package-tour-navlink6 button"
-              onClick={() => navigate("/payment")}
+              onClick={handleReservation}
+              disabled={!bookingDate || numPeople < 1}
             >
               <span className="information-package-tour-text18">
                 <span>จองเลย!</span>
-                <br></br>
-                <br></br>
+                <br />
+                <br />
               </span>
             </button>
-          </div>
-          <h2>สิ่งที่รวมในทัวร์{tour?.name}</h2>
-          <div className="information-package-tour-container6">
-            <p>{tour?.service}</p>
           </div>
           <h2>รีวิวจากลูกค้า</h2>
           <div className="information-package-tour-container7">
@@ -80,19 +131,19 @@ const AdditionalInformationPackageTour = () => {
                 </span>
                 <div>
                   <div className="information-package-tour-container8">
-                  <div className="information-package-tour-container9">
-                    <svg
-                      viewBox="0 0 1024 1024"
-                      className="information-package-tour-icon"
-                    >
-                      <path d="M512 820q68 0 143-40t113-98q-2-56-90-94t-166-38-166 37-90 95q38 58 113 98t143 40zM512 214q-52 0-90 38t-38 90 38 90 90 38 90-38 38-90-38-90-90-38zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-                    </svg>
-                    <span className="information-package-tour-text">: </span>
-                  </div>
-                  <input
-                    type="text"
-                    className="information-package-tour-textinput input"
-                  />
+                    <div className="information-package-tour-container9">
+                      <svg
+                        viewBox="0 0 1024 1024"
+                        className="information-package-tour-icon"
+                      >
+                        <path d="M512 820q68 0 143-40t113-98q-2-56-90-94t-166-38-166 37-90 95q38 58 113 98t143 40zM512 214q-52 0-90 38t-38 90 38 90 90 38 90-38 38-90-38-90-90-38zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
+                      </svg>
+                      <span className="information-package-tour-text">: </span>
+                    </div>
+                    <input
+                      type="text"
+                      className="information-package-tour-textinput input"
+                    />
                   </div>
                 </div>
               </form>
