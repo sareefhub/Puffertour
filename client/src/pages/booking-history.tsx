@@ -2,13 +2,19 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import ReserveStatus from "../models/Reserve";
 import { PaymentRepository } from "../repositories/PaymentRepository";
+import SeatRemaining from "../models/seatRemaining";
+import Packagetour from "../models/Package";
+import { PackageRepository } from "../repositories/PackageRepository";
 
 import "./booking-history.css";
 
 const paymentRepository = new PaymentRepository();
+const packageRepository = new PackageRepository();
 
 const Booking: React.FC = () => {
   const [payments, setPayments] = useState<ReserveStatus[]>([]);
+  const [quantity, setQuantity] = useState<number>(1);
+  const [DataTour, setDataTour] = useState<Packagetour[]>([]);
 
   useEffect(() => {
     async function fetchPayments() {
@@ -18,10 +24,47 @@ const Booking: React.FC = () => {
       }
     }
     fetchPayments();
+
+    async function fetchPackage() {
+      const packageData = await packageRepository.getAll();
+      if (packageData) {
+        setDataTour(packageData);
+      }
+    }
+    fetchPackage();
   }, []);
 
-  const handleCancelBooking = (bookingId: string) => {
-    // Implement cancel booking logic here
+  const tour = DataTour.length > 0 ? DataTour[0].attributes : null;
+  const seatLeft = (tour?.remaining as number) + quantity;
+
+  const updateSeat: SeatRemaining = {
+    data: {
+      remaining: seatLeft,
+    },
+  };
+
+  const handleCancelBooking = async (
+    bookingId: string | number,
+    seatLeft: number
+  ) => {
+    try {
+      await paymentRepository.deletePayment(bookingId);
+      // filter out the cancelled payment from the payments array
+      const updatedPayments = payments.filter(
+        (payment) => payment.id !== bookingId
+      );
+      setPayments(updatedPayments);
+      alert("Reservation cancelled successfully.");
+
+      // update the seat remaining count
+      const tourId = DataTour.length > 0 ? DataTour[0].id : null;
+      if (tourId) {
+        await packageRepository.updateSeat(tourId, updateSeat);
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Failed to cancel reservation.");
+    }
   };
 
   return (
@@ -50,6 +93,9 @@ const Booking: React.FC = () => {
               <td>
                 <button
                   className="button1"
+                  onClick={() => {
+                    handleCancelBooking(payment.id, seatLeft);
+                  }}
                 >
                   ยกเลิกการจอง
                 </button>
