@@ -76,11 +76,15 @@ const AdditionalInformationDaysTour = () => {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Please fill out all information before making a reservation",
+        text: "กรุณาระบุวันเดินทางให้เรียบร้อยด้วยครับ",
       });
     } else {
+      Swal.fire({
+        icon: "success",
+        title: "จองสำเร็จ",
+        text: "กรุณาชำระเงินด้วยครับ",
+      })
       await Repository.Paymentdata.createPayment(newPayment)
-      console.log(newPayment)
       await Repository.Tourdata.updateSeat(tour_id as string, updateSeat)
       navigate("/payment");
     }
@@ -136,7 +140,6 @@ const AdditionalInformationDaysTour = () => {
             <button
               className="information-days-tour-navlink6 button"
               onClick={handleReservation}
-              disabled={!bookingDate || quantity < 1}
             >
               <span className="information-days-tour-text18">
                 <span>จองเลย!</span>
