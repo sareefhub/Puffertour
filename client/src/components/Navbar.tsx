@@ -8,12 +8,17 @@ const Navbar: React.FC = (props) => {
   const navigate = useNavigate();
   const user = getUserData()
   const [activeLink, setActiveLink] = useState("");
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false); 
-
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+  
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const clickedLink = event.currentTarget;
     const clickedLinkText = clickedLink.textContent || "";
     setActiveLink(clickedLinkText);
+  
+    if (clickedLinkText === "แจ้งชำระเงิน" && !CheckUserToken()) {
+      event.preventDefault();
+      navigate("/login");
+    }
   };
 
   useEffect(() => {
