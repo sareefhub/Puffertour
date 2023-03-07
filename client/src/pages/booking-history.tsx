@@ -4,6 +4,10 @@ import Navbar from "../components/Navbar";
 import "./booking-history.css";
 
 const Booking: React.FC = (props) => {
+  const handleCancelBooking = (bookingId: string) => {
+    // Implement cancel booking logic here
+  };
+
   return (
     <div className="bookcontainer">
       <Navbar />
@@ -25,8 +29,12 @@ const Booking: React.FC = (props) => {
             <td>ย่านเมืองเก่าสงขลา</td>
             <td>5/10</td>
             <td>500 บาท</td>
-            <td>ยังไม่ชำระ</td>
-            <td>ชำระเงิน</td>
+            <td>ยังไม่ชำระเงิน</td>
+            <td>
+              <button className="button1" onClick={() => handleCancelBooking("booking-id-1")}>
+                ยกเลิกการจอง
+              </button>
+            </td>
           </tr>
           <tr>
             <td></td>

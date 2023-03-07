@@ -26,27 +26,13 @@
     justify-content: center;
     background-color: black;
   }
-  .payment-form08 {
-    gap: var(--dl-space-space-halfunit);
-    width: 149px;
-    height: 43px;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .payment-icon12 {
-    fill: yellow;
-    width: 38px;
-    height: 46px;
-  }
   .payment-text01 {
-    color: yellow;
-    font-size: 20px;
+    color: white;
+    font-size: 30px;
     font-style: normal;
     text-align: left;
     font-family: Pridi;
-    font-weight: 400;
+    font-weight: bold;
   }
   .payment-form09 {
     gap: var(--dl-space-space-halfunit);
