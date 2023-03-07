@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 import { TextField, Grid } from '@mui/material';
 import { getUserData } from '../helper';
@@ -6,11 +6,6 @@ import './userProfile.css';
 
 const UserProfile:React.FC = (props) => {
   const user = getUserData()
-  const [username , setUsername] = useState({userdata: ''})
-
-  useEffect(() => {
-    const userdata = localStorage.getItem('user') || '';
-  }, []);
 
   return (
     <div className="user-container">

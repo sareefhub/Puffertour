@@ -8,8 +8,7 @@ const Navbar: React.FC = (props) => {
   const navigate = useNavigate();
   const user = getUserData()
   const [activeLink, setActiveLink] = useState("");
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false); // added state for dropdown visibility
-  const [username, setUsername] = useState(""); // added state for username
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false); 
 
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const clickedLink = event.currentTarget;
@@ -97,7 +96,7 @@ const Navbar: React.FC = (props) => {
               <div className="action">
                 <div className="Profileuser" onClick={handleProfileClick}>
                   <img src="./pictures/Profileuser.png" alt="" />
-                  <span>{user.username}</span> {/* added username display */}
+                  <span>{user.username}</span>
                 </div>
                 {isDropdownVisible && (
                   <div className="dropdown">

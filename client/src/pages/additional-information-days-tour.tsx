@@ -45,7 +45,10 @@ const AdditionalInformationDaysTour = () => {
 
   const handleNumPeopleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const NumPeople = Number(event.target.value)
-    setQuantity(NumPeople);
+    const remainingSeats = tour?.remaining as number;
+    if (NumPeople <= remainingSeats) {
+      setQuantity(NumPeople);
+    }
   };
   
   const seatLeft = tour?.remaining as number - quantity
@@ -69,7 +72,7 @@ const AdditionalInformationDaysTour = () => {
   }
 
   const handleReservation = async () => {
-    if (!bookingDate || quantity < 1) {
+    if (!bookingDate) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -77,7 +80,7 @@ const AdditionalInformationDaysTour = () => {
       });
     } else {
       await Repository.Paymentdata.createPayment(newPayment)
-      await Repository.Tourdata.updateSeat(params.id as string, updateSeat)
+      await Repository.Tourdata.updateSeat(tour_id as string, updateSeat)
       navigate("/payment");
     }
   };
