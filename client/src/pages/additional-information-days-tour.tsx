@@ -124,6 +124,7 @@ const AdditionalInformationDaysTour = () => {
               className="date-input"
               value={bookingDate?.toISOString().slice(0, 10)}
               onChange={handleDateChange}
+              min={new Date().toISOString().slice(0, 10)}
             />
             </form>
             <label htmlFor="numPeople" className="Tourday">
