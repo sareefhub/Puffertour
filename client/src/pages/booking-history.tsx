@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
+import ReserveStatus from "../models/Reserve";
+import { PaymentRepository } from "../repositories/PaymentRepository";
 
 import "./booking-history.css";
 
-const Booking: React.FC = (props) => {
+const paymentRepository = new PaymentRepository();
+
+const Booking: React.FC = () => {
+  const [payments, setPayments] = useState<ReserveStatus[]>([]);
+
+  useEffect(() => {
+    async function fetchPayments() {
+      const paymentData = await paymentRepository.getByUser();
+      if (paymentData) {
+        setPayments(paymentData);
+      }
+    }
+    fetchPayments();
+  }, []);
+
   const handleCancelBooking = (bookingId: string) => {
     // Implement cancel booking logic here
   };
@@ -25,52 +41,21 @@ const Booking: React.FC = (props) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>ย่านเมืองเก่าสงขลา</td>
-            <td>5/10</td>
-            <td>500 บาท</td>
-            <td>ยังไม่ชำระเงิน</td>
-            <td>
-              <button className="button1" onClick={() => handleCancelBooking("booking-id-1")}>
-                ยกเลิกการจอง
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+          {payments.map((payment) => (
+            <tr key={payment.attributes.tour_id}>
+              <td>{payment.attributes.tour_name}</td>
+              <td>{payment.attributes.quantity}</td>
+              <td>{payment.attributes.total_price} บาท</td>
+              <td>{payment.attributes.status}</td>
+              <td>
+                <button
+                  className="button1"
+                >
+                  ยกเลิกการจอง
+                </button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
