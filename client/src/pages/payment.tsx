@@ -61,26 +61,7 @@ const Payment = () => {
     <div className="payment-container">
       <Navbar />
       <div className="payment-container04">
-        <form className="payment-form08">
-          <svg viewBox="0 0 877.7142857142857 1024" className="payment-icon12">
-            <image
-              xlinkHref="./pictures/whitecircle-removebg-preview.png"
-              width="100%"
-              height="100%"
-            />
-          </svg>
-          <span className="payment-text01">ชำระเงิน</span>
-        </form>
-        <form className="payment-form10">
-          <svg viewBox="0 0 877.7142857142857 1024" className="payment-icon16">
-            <image
-              xlinkHref="./pictures/whitecircle-removebg-preview.png"
-              width="100%"
-              height="100%"
-            />
-          </svg>
-          <span className="payment-text02">ชำระเงินสำเร็จ</span>
-        </form>
+        <span className="payment-text01">แจ้งชำระเงิน</span>
       </div>
       <div className="payment-container05">
         <form className="payment-form11">
