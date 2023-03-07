@@ -36,7 +36,7 @@ const HowToBook: React.FC = (props) => {
       </div>
       <div className="how-to-book-container7">
         <form className="how-to-book-form10">
-          <span className="how-to-book-text8">อยากจะจองทัวร์ใช่ใหม?</span>
+          <h4 className="how-to-book-text8">อยากจะจองทัวร์ใช่ใหม?</h4>
         </form>
       </div>
       <div className="how-to-book-container8">
