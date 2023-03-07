@@ -65,7 +65,7 @@ const AdditionalInformationDaysTour = () => {
       tour_id: params.id as string,
       tour_name: tour_name as string,
       tour_start: bookingDate,
-      user: user,
+      user: user.username,
       quantity: quantity,
       total_price: total_price
     }
@@ -80,6 +80,7 @@ const AdditionalInformationDaysTour = () => {
       });
     } else {
       await Repository.Paymentdata.createPayment(newPayment)
+      console.log(newPayment)
       await Repository.Tourdata.updateSeat(tour_id as string, updateSeat)
       navigate("/payment");
     }
