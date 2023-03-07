@@ -43,6 +43,7 @@ const Navbar: React.FC = (props) => {
   const handleLogout = () => {
     localStorage.removeItem("token"); // remove token from local storage
     localStorage.removeItem("username"); // remove username from local storage
+    localStorage.removeItem("email"); // remove email from local storage
     navigate("/home"); // navigate to login page
   };
 
