@@ -1,5 +1,6 @@
-export default interface Payment {
-    data: {
+export default interface ReserveStatus {
+    id : number;
+    attributes: {
         tour_name: string,
         tour_id: string | number,
         tour_start: Date | null,

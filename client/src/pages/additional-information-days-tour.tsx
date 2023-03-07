@@ -7,14 +7,19 @@ import { useState, useEffect } from "react";
 import Repository from "../repositories";
 import "./additional-information-days-tour.css";
 import Swal from "sweetalert2";
+import { getUserData } from "../helper";
+import Payment from "../models/Payment";
+import SeatRemaining from "../models/seatRemaining";
 
 const AdditionalInformationDaysTour = () => {
-  const [DataTour, setDataTour] = useState<OneDayTour[]>([]);
-  const [bookingDate, setBookingDate] = useState<string>("");
-  const [numPeople, setNumPeople] = useState<number>(1);
 
+  const [DataTour, setDataTour] = useState<OneDayTour[]>([]);
+  const [bookingDate, setBookingDate] = useState<Date | null>(null);
+  const [quantity, setQuantity] = useState<number>(1);
+  
   const navigate = useNavigate();
   const params = useParams();
+  const user = getUserData();
 
   const fetchData = async () => {
     const result = await Repository.Tourdata.get(params.id as string);
@@ -28,26 +33,51 @@ const AdditionalInformationDaysTour = () => {
   }, [params.id]);
 
   const tour = DataTour.length > 0 ? DataTour[0].attributes : null;
+  const tourID = DataTour.length > 0 ? DataTour[0] : null;
+  const tour_id = tourID?.id.toString() || 0;
+  const tour_name = tour?.name;
+  const total_price = tour?.price as number * quantity;
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setBookingDate(event.target.value);
+    const Datebooking = new Date(event.target.value);
+    setBookingDate(Datebooking);
   };
 
   const handleNumPeopleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setNumPeople(Number(event.target.value));
+    const NumPeople = Number(event.target.value)
+    setQuantity(NumPeople);
   };
+  
+  const seatLeft = tour?.remaining as number - quantity
 
-  const handleReservation = () => {
-    // Check if all information is filled out
-    if (!bookingDate || numPeople < 1) {
-      // If not, show SweetAlert error message
+  const updateSeat : SeatRemaining = {
+    data : {
+        remaining: seatLeft
+    }
+  }
+
+  const newPayment: Payment = {
+    data : {
+      status: 'reserved',
+      tour_id: params.id as string,
+      tour_name: tour_name as string,
+      tour_start: bookingDate,
+      user: user,
+      quantity: quantity,
+      total_price: total_price
+    }
+  }
+
+  const handleReservation = async () => {
+    if (!bookingDate || quantity < 1) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "Please fill out all information before making a reservation",
       });
     } else {
-      // Handle the reservation logic here
+      await Repository.Paymentdata.createPayment(newPayment)
+      await Repository.Tourdata.updateSeat(params.id as string, updateSeat)
       navigate("/payment");
     }
   };
@@ -82,7 +112,7 @@ const AdditionalInformationDaysTour = () => {
               id="tourstart"
               name="tourstart"
               className="date-input"
-              value={bookingDate}
+              value={bookingDate?.toISOString().slice(0, 10)}
               onChange={handleDateChange}
             />
             </form>
@@ -94,14 +124,15 @@ const AdditionalInformationDaysTour = () => {
               id="numPeople"
               name="numPeople"
               className="input"
-              value={numPeople}
+              value={quantity}
               onChange={handleNumPeopleChange}
+              min={1}
             />
-            <span className="Text1">ราคารวม {tour?.price} บาท</span>
+            <span className="Text1">ราคารวม {total_price} บาท</span>
             <button
               className="information-days-tour-navlink6 button"
               onClick={handleReservation}
-              disabled={!bookingDate || numPeople < 1}
+              disabled={!bookingDate || quantity < 1}
             >
               <span className="information-days-tour-text18">
                 <span>จองเลย!</span>
