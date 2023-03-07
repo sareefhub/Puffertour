@@ -15,11 +15,11 @@
     "status": {
       "type": "enumeration",
       "enum": [
-        "reserved",
-        "notCheck",
-        "finish"
+        "Unpaid",
+        "Checking",
+        "Paid"
       ],
-      "default": "reserved"
+      "default": "Unpaid"
     },
     "user": {
       "type": "string"

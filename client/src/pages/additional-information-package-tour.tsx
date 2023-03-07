@@ -59,7 +59,7 @@ const AdditionalInformationPackageTour = () => {
 
   const newPayment: Payment = {
     data : {
-      status: 'reserved',
+      status: 'Unpaid',
       tour_id: params.id as string,
       tour_name: tour_name as string,
       tour_start: bookingDate,
