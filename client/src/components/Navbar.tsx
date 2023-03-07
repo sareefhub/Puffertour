@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { getUserData } from "../helper";
 
 import "./Navbar.css";
 
 const Navbar: React.FC = (props) => {
   const navigate = useNavigate();
+  const user = getUserData()
   const [activeLink, setActiveLink] = useState("");
   const [isDropdownVisible, setIsDropdownVisible] = useState(false); // added state for dropdown visibility
   const [username, setUsername] = useState(""); // added state for username
@@ -28,9 +30,8 @@ const Navbar: React.FC = (props) => {
   }, [activeLink]);
 
   const CheckUserToken = () => {
-    const checktoken = localStorage.getItem("token");
-    const CheckUserToken = localStorage.getItem("username");
-    if (checktoken) {
+    const checkuser = localStorage.getItem("user");
+    if (checkuser) {
       return true;
     }
     return false;
@@ -41,9 +42,7 @@ const Navbar: React.FC = (props) => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("token"); // remove token from local storage
-    localStorage.removeItem("username"); // remove username from local storage
-    localStorage.removeItem("email"); // remove email from local storage
+    localStorage.removeItem("user"); // remove token from local storage
     navigate("/home"); // navigate to login page
   };
 
@@ -98,7 +97,7 @@ const Navbar: React.FC = (props) => {
               <div className="action">
                 <div className="Profileuser" onClick={handleProfileClick}>
                   <img src="./pictures/Profileuser.png" alt="" />
-                  <span>{username}</span> {/* added username display */}
+                  <span>{user.username}</span> {/* added username display */}
                 </div>
                 {isDropdownVisible && (
                   <div className="dropdown">
