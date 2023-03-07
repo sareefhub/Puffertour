@@ -70,11 +70,13 @@ const AdditionalInformationPackageTour = () => {
   }
 
   const handleReservation = async () => {
-    if (!bookingDate) {
+    if (!user) {
+      navigate('/login');
+    } else if (!bookingDate) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "กรุณาระบุวันที่จะเดินทางให้เรียบร้อยด้วยครับ",
+        text: "กรุณาระบุวันเดินทางให้เรียบร้อยด้วยครับ",
       });
     } else {
       Swal.fire({
