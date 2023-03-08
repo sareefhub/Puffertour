@@ -53,7 +53,7 @@ const Navbar: React.FC = (props) => {
   return (
     <header className="navbar_container">
       <div className="Logo">
-        <img alt="" src="./pictures/logotour.png" className="home-image" />
+        <img alt="" src='/pictures/logotour.png' className="home-image" />
         <span className="home-text">uffertour</span>
       </div>
       <div className="menu_container">
@@ -100,7 +100,7 @@ const Navbar: React.FC = (props) => {
             {CheckUserToken() && (
               <div className="action">
                 <div className="Profileuser" onClick={handleProfileClick}>
-                  <img src="./pictures/Profileuser.png" alt="" />
+                  <img src='/Pictures/Profileuser.png' alt="" />
                   <span>{user.username}</span>
                 </div>
                 {isDropdownVisible && (
