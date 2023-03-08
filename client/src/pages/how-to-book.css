@@ -8,91 +8,94 @@
     flex-direction: column;
     background-color: #E8E8E8;
   }
-  .how-to-book-form08 {
-    width: 229px;
-    height: 42px;
-    display: flex;
-  }
-  .how-to-book-container6 {
-    width: 1372px;
-    height: 164px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-  }
+.how-to-book-form08 {
+  width: 229px;
+  height: 42px;
+  display: flex;
+}
+.how-to-book-form09 {
+  width: 900px;
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.how-to-book-text2 {
+  font-family: Pridi;
+}
+.how-to-book-text5 {
+  font-family: Pridi;
+}
+.how-to-book-text6 {
+  font-family: Pridi;
+}
+.how-to-book-text7 {
+  font-family: Pridi;
+}
+.how-to-book-container7 {
+  width: 100%;
+  height: 97px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.how-to-book-form10 {
+  width: 200px;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--dl-radius-radius-radius8);
+  justify-content: center;
+  background-color: black;
+}
+.how-to-book-text8 {
+  color: var(--dl-color-gray-white);
+  font-family: Pridi;
+}
+.how-to-book-container8 {
+  width: 100%;
+  height: 111px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.how-to-book-form11 {
+  gap: 1;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.how-to-book-navlink7 {
+  font-family: Pridi;
+  border-radius: var(--dl-radius-radius-radius8);
+  text-decoration: none;
+  background-color: #D9D5C5;
+}
+.how-to-book-form12 {
+  gap: 1;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.how-to-book-button {
+  font-family: Pridi;
+  border-radius: var(--dl-radius-radius-radius8);
+  text-decoration: none;
+  background-color: #D9D5C5;
+}
+@media screen and (max-width: 425px) {
   .how-to-book-form09 {
-    width: 886px;
-    height: 298px;
+    width: 400px;
+    height: 300px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
+    gap: 20px ;
   }
-  .how-to-book-text2 {
-    font-family: Pridi;
-  }
-  .how-to-book-text5 {
-    font-family: Pridi;
-  }
-  .how-to-book-text6 {
-    font-family: Pridi;
-  }
-  .how-to-book-text7 {
-    font-family: Pridi;
-  }
-  .how-to-book-container7 {
-    width: 100%;
-    height: 97px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .how-to-book-form10 {
-    width: 200px;
-    height: 63px;
-    display: flex;
-    align-items: center;
-    border-radius: var(--dl-radius-radius-radius8);
-    justify-content: center;
-    background-color: black;
-  }
-  .how-to-book-text8 {
-    color: var(--dl-color-gray-white);
-    font-family: Pridi;
-  }
-  .how-to-book-container8 {
-    width: 100%;
-    height: 111px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .how-to-book-form11 {
-    gap: 1;
-    width: 200px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .how-to-book-navlink7 {
-    font-family: Pridi;
-    border-radius: var(--dl-radius-radius-radius8);
-    text-decoration: none;
-    background-color: #D9D5C5;
-  }
-  .how-to-book-form12 {
-    gap: 1;
-    width: 200px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .how-to-book-button {
-    font-family: Pridi;
-    border-radius: var(--dl-radius-radius-radius8);
-    text-decoration: none;
-    background-color: #D9D5C5;
-  }
+}
