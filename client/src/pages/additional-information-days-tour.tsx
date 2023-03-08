@@ -10,12 +10,16 @@ import Swal from "sweetalert2";
 import { getUserData } from "../helper";
 import Payment from "../models/Payment";
 import SeatRemaining from "../models/seatRemaining";
+import ReviewData from "../models/Reviewdata";
+import ReviewCard from "../components/Review";
+import Review from "../models/Review";
 
 const AdditionalInformationDaysTour = () => {
 
   const [DataTour, setDataTour] = useState<OneDayTour[]>([]);
   const [bookingDate, setBookingDate] = useState<Date | null>(null);
   const [quantity, setQuantity] = useState<number>(1);
+  const [reviews, setReviews] = useState<Review[]>([]);
   
   const navigate = useNavigate();
   const params = useParams();
@@ -27,10 +31,20 @@ const AdditionalInformationDaysTour = () => {
       setDataTour(result);
     }
   };
+  const fetchReview = async () => {
+    const rev = await Repository.ReviewData.getReview();
+    if (rev) {
+      setReviews(rev);
+    }
+  };
 
   useEffect(() => {
     fetchData();
   }, [params.id]);
+
+  useEffect(() => {
+    fetchReview();
+  }, []);
 
   const tour = DataTour.length > 0 ? DataTour[0].attributes : null;
   const tourID = DataTour.length > 0 ? DataTour[0] : null;
@@ -38,6 +52,7 @@ const AdditionalInformationDaysTour = () => {
   const tour_name = tour?.name;
   const total_price = tour?.price as number * quantity;
   const tour_seat = tour?.remaining as number
+  const Review = reviews.length > 0 ? reviews[0].attributes : null;
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const Datebooking = new Date(event.target.value);
@@ -71,6 +86,14 @@ const AdditionalInformationDaysTour = () => {
       total_price: total_price,
       type: 'oneday',
       seat: tour_seat
+    }
+  }
+  const newReview: ReviewData = {
+    data : {
+      user: user.username,
+      tour_id: params.id as string,
+      tour_name: tour_name as string,
+      review: Review?.review as string,
     }
   }
 
@@ -158,22 +181,11 @@ const AdditionalInformationDaysTour = () => {
           <div className="information-days-tour-container7">
             <div>
               <form>
-                <span>
-                  <span>
-                    คุณ Sola : ไกด์นำทัวร์ดีมากเลยครับ ไว้จะมาใช้บริการอีกนะครับ
-                  </span>
-                  <br></br>
-                  <span>
-                    คุณ Warunyu : สนุกๆสุดเลยครับ คุ้มค่ากับเงินที่เสียไปจริงๆ!
-                  </span>
-                  <br></br>
-                  <span>
-                    คุณ Navaphon : สถานที่ท่องเที่ยวสวยมากเลยครับ
-                    ไว้วันหลังจะมาอีก
-                  </span>
-                  <br></br>
-                  <span>คุณ Sareef : ดีมากครับ</span>
-                </span>
+                
+                  {reviews.map((item) => (
+                  <ReviewCard ReviewData={item} />
+                  ))}
+                
                 <div>
                   <div className="information-days-tour-container8">
                     <div className="information-days-tour-container9">
