@@ -25,8 +25,8 @@ const PackagesTour = () => {
     <div className="package-tour-container" >
       <Navbar />
       <Picture />
-      <div className="tap-bar">
-        <span className="text-tour">แพ็คเกจทัวร์</span>
+      <div className="payment-container04">
+        <span className="payment-text01">แพ็คเกจทัวร์</span>
       </div>
       <Grid container spacing={2} justifyContent="center">
         {DataTour.map((item, index) => (

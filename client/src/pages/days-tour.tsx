@@ -24,8 +24,8 @@ const DaysTour = () => {
     <div className="daystour-container" >
       <Navbar />
       <Picture />
-      <div className="tap-bar">
-        <span className="text-tour">ทัวร์รายวัน</span>
+      <div className="payment-container04">
+        <span className="payment-text01">ทัวร์รายวัน</span>
       </div>
       <Grid container spacing={2} justifyContent="center">
         {DataTour.map((item, index) => (
