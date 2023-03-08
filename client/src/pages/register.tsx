@@ -49,7 +49,7 @@ const Register: React.FC = () => {
 
   return (
       <div className="container">
-        <div className="card">
+        <div className="cardregister">
           <div className="card-header">
             <div className="text-header">สมัครสมาชิก</div>
           </div>
