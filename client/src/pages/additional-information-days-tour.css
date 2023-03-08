@@ -52,11 +52,6 @@
   margin: 30px;
   padding: 40px;
 }
-.Text{
-  margin-top: -40px;
-  font-size: 30px;
-  font-weight: 700;
-}
 .Tourday{
   font-size: 20px;
 }
@@ -64,8 +59,7 @@
   font-size: 25px;
   margin-top: 20px;
 }
-.Text1{
-  margin-top: 10px;
+.Textt{
   font-size: 30px;
   font-weight: 700;
 }
@@ -89,7 +83,7 @@
 }
 .information-days-tour-navlink6 {
   width: 150px;
-  height: 60px;
+  height: 50px;
   text-decoration: none;
   align-items: center;
   justify-content: center;

@@ -12,7 +12,7 @@ const UserProfile:React.FC = (props) => {
       <Navbar />
       <div className="cardd-container">
         <div className="cardd1">
-          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" className="rounded-circle" width="150" />
+          <img src="./pictures/Profileuser.png" alt="Admin" className="rounded-circle" width="150" />
           <div className="user-name">
             <h4>{user.username}</h4>
           </div>

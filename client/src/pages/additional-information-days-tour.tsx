@@ -142,7 +142,7 @@ const AdditionalInformationDaysTour = () => {
               onChange={handleNumPeopleChange}
               min={1}
             />
-            <span className="Text1">ราคารวม {total_price} บาท</span>
+            <span className="Textt">ราคารวม {total_price} บาท</span>
             <button
               className="information-days-tour-navlink6 button"
               onClick={handleReservation}
