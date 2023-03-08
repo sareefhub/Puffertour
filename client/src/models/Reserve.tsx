@@ -8,5 +8,7 @@ export default interface ReserveStatus {
         user: string,
         quantity: number,
         total_price: number
+        seat: number,
+        type: string
     }
 }
