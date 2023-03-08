@@ -37,6 +37,7 @@ const AdditionalInformationDaysTour = () => {
   const tour_id = tourID?.id.toString() || 0;
   const tour_name = tour?.name;
   const total_price = tour?.price as number * quantity;
+  const tour_seat = tour?.remaining as number
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const Datebooking = new Date(event.target.value);
@@ -67,7 +68,9 @@ const AdditionalInformationDaysTour = () => {
       tour_start: bookingDate,
       user: user.username,
       quantity: quantity,
-      total_price: total_price
+      total_price: total_price,
+      type: 'oneday',
+      seat: tour_seat
     }
   }
 

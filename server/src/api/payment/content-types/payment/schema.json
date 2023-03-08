@@ -38,6 +38,16 @@
     },
     "tour_id": {
       "type": "string"
+    },
+    "seat": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "oneday",
+        "package"
+      ]
     }
   }
 }

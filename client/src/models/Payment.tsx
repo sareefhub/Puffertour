@@ -6,6 +6,8 @@ export default interface Payment {
         status: string,
         user: string,
         quantity: number,
-        total_price: number
+        total_price: number,
+        seat: number,
+        type: string
     }
 }
