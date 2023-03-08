@@ -9,8 +9,8 @@ const AboutUs:React.FC = (props) => {
     <div className="about-us-container">
       <Navbar/>
       <Picture/>
-      <div className="tap-bar">
-          <span className="text-tour">ติดต่อเรา</span>
+      <div className="payment-container04">
+        <span className="payment-text01">ติดต่อเรา</span>
       </div>
       <div className="about-us-container06">
         <div className="about-us-container07">
