@@ -7,7 +7,7 @@ export interface IRepository<T> {
     createPayment?(data: T): Promise<T>
     deletePayment?(id: string|number): Promise<void>
     
-    getByID?(id: string|number) : Promise<T[] | null>
+    getReview?(tourName: string) : Promise<T[] | null>
     createReview?(data: T): Promise<T>
     deleteReview?(id: string|number): Promise<void>
 }

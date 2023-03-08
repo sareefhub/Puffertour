@@ -9,8 +9,8 @@ export class ReviewRepository implements IRepository<Review | ReviewData>{
     urlPrefix = "http://localhost:1337/api/reviews"
     token = user.jwt
 
-    async getReview(): Promise<Review[] | null> {
-        const res = await fetch(`${this.urlPrefix}?populate=*`,{
+    async getReview(tourName: string): Promise<Review[] | null> {
+        const res = await fetch(`${this.urlPrefix}?populate=*&filters[tour_name][$eq]=${tourName}`,{
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${this.token}`
@@ -20,7 +20,7 @@ export class ReviewRepository implements IRepository<Review | ReviewData>{
         return data.data
     }
 
-    async createPayment(data: ReviewData): Promise<ReviewData> {
+    async createReview(data: ReviewData): Promise<ReviewData> {
         const resp = await fetch(`${this.urlPrefix}`, {
             method: "POST",
             headers: {
@@ -34,7 +34,7 @@ export class ReviewRepository implements IRepository<Review | ReviewData>{
         return data_res;
     }
 
-    async deletePayment(id: string | number): Promise<void> {
+    async deleteReview(id: string | number): Promise<void> {
         const resp = await fetch(`${this.urlPrefix}/${id}`, {
             method: "DELETE",
             headers: {
