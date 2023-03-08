@@ -6,31 +6,32 @@ import CardBooking from "../components/cardbooking";
 import "./booking-history.css";
 
 const Booking = () => {
-    const [Booking, setBooking] = useState<ReserveStatus[]>([]);
+  const [Booking, setBooking] = useState<ReserveStatus[]>([]);
 
-    const fetchData = async () => {
-      const res = await Repository.Paymentdata.getByUser();
-      if(res) {
-        setBooking(res)
-      }
-    };
+  const fetchData = async () => {
+    const res = await Repository.Paymentdata.getByUser();
+    if (res) {
+      setBooking(res);
+    }
+  };
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-    return (
-        <div>
-            <Navbar />
-                <div className="bookcontainer">
-                    <div className="row">
-                        {Booking.map((item) => (
-                            <CardBooking BookingData={item} />
-                        ))}
-                    </div>
-                </div>
+  return (
+    <div className="bookcontainer">
+      <Navbar />
+        <div className="booking-container">
+            <span className="booking-text">ประวัติการจอง</span>
+        </div>  
+        <div className="row">
+        {Booking.map((item) => (
+            <CardBooking BookingData={item} />
+        ))}
         </div>
-    );
+    </div>
+  );
 };
 
 export default Booking;
