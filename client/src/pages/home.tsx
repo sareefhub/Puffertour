@@ -29,8 +29,8 @@ const Homepage = () => {
     <header className="home-container">
       <Navbar />
       <Picture/>
-      <div className="tap-bar">
-          <span className="text-tour">ทัวร์รายวัน</span>
+      <div className="payment-container04">
+        <span className="payment-text01">ทัวร์รายวัน</span>
       </div>
       <div className="days-tour-container">
         <Grid container spacing={2} justifyContent="center">
@@ -41,8 +41,8 @@ const Homepage = () => {
         ))}
         </Grid>
       </div>
-      <div className="tap-bar">
-          <span className="text-tour">ทัวร์แพ็กเกจ</span>
+      <div className="payment-container04">
+        <span className="payment-text01">ทัวร์แพ็กเกจ</span>
       </div>
       <div className="days-tour-container">
         <Grid container spacing={2} justifyContent="center">
