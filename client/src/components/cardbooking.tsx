@@ -15,6 +15,7 @@ function CardBooking(props: Props) {
     const total_price = BookingData?.total_price as number
     const status = BookingData?.status as string
     const seat = BookingData?.seat as number
+    const image = BookingData?.image
     
     const updateseat: seatRemaining = {
         data: {
@@ -35,7 +36,8 @@ function CardBooking(props: Props) {
     
     return (
         <div className="cardbooking">
-            <div className="title-card"> รายการ {tour_name} </div>
+            <div className="title-card"> รายการ ทัวร์{tour_name} </div>
+            <div className="image"><img alt="" src={image} className="picture"/></div>
                 <div className="heading"> จำนวน {quantity} คน
                 <div className="heading"> ราคาทั้งหมด {total_price} บาท
                 <div className="heading"> สถานะ {status} 

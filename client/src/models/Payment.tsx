@@ -8,6 +8,7 @@ export default interface Payment {
         quantity: number,
         total_price: number,
         seat: number,
-        type: string
+        type: string,
+        image: string,
     }
 }

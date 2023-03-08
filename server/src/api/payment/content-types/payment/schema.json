@@ -48,6 +48,9 @@
         "oneday",
         "package"
       ]
+    },
+    "image": {
+      "type": "string"
     }
   }
 }

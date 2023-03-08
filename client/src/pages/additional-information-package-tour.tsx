@@ -51,6 +51,7 @@ const AdditionalInformationPackageTour = () => {
   const tour_name = tour?.name as string;
   const total_price = tour?.price as number * quantity;
   const tour_seat = tour?.remaining
+  const image = `http://localhost:1337${tour?.cover_image.data.attributes.formats.thumbnail.url}`
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const Datebooking = new Date(event.target.value);
@@ -88,7 +89,8 @@ const AdditionalInformationPackageTour = () => {
       quantity: quantity,
       total_price: total_price,
       type: 'package',
-      seat: tour_seat as number
+      seat: tour_seat as number,
+      image: image
     }
   }
   const newReview: ReviewData = {
@@ -198,27 +200,27 @@ const AdditionalInformationPackageTour = () => {
                   ))}
                 
                 <div>
-                  <div className="information-days-tour-container8">
-                    <div className="information-days-tour-container9">
+                  <div className="information-package-tour-container8">
+                    <div className="information-package-tour-container9">
                       <svg
                         viewBox="0 0 1024 1024"
-                        className="information-days-tour-icon"
+                        className="information-package-tour-icon"
                       >
                         <path d="M512 820q68 0 143-40t113-98q-2-56-90-94t-166-38-166 37-90 95q38 58 113 98t143 40zM512 214q-52 0-90 38t-38 90 38 90 90 38 90-38 38-90-38-90-90-38zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
                       </svg>
-                      <span className="information-days-tour-text">: </span>
+                      <span className="information-package-tour-text">: </span>
                     </div>
                     <input
                       type="text"
-                      className="information-days-tour-textinput input"
+                      className="information-package-tour-textinput input"
                       value={reviewtext}
                       onChange={handleTextChange}
                     />
                     <button
-                      className="information-days-tour-navlink6 button"
+                      className="information-package-tour-navlink6 button"
                       onClick={handleReview}
                     >
-                    <span className="information-days-tour-text18">
+                    <span className="information-package-tour-text18">
                     <span>รีวิว</span>
                     </span>
                     </button>
