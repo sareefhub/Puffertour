@@ -52,3 +52,12 @@
     border-radius: .25rem;
     gap: 20px;
 }
+
+
+@media screen and (max-width: 425px) { 
+.cardd2 {
+    width: 400px;
+    height: 300px;
+}
+
+}

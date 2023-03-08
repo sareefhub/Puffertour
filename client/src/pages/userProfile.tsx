@@ -22,8 +22,8 @@ const UserProfile:React.FC = (props) => {
         </div>
         <div className="cardd2">
           <div className="text-container">
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+            <Grid container spacing={4}>
+              <Grid item xs={8} sm={6} marginLeft={10}>
                 <TextField
                   name="username"
                   required
@@ -35,7 +35,7 @@ const UserProfile:React.FC = (props) => {
                   disabled
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={8} sm={6} marginLeft={10}>
                 <TextField
                   name="email"
                   required
