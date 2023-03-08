@@ -76,39 +76,11 @@ const Payment = () => {
           <h1 className="payment-text04">
             <text>รายละเอียดการโอนเงิน</text>
           </h1>
-          <text className="promptpay">
-            ธนาคารกสิกรไทย : หมายเลขบัญชี 141-x-xxxxx-0
-          </text>
-          <text className="promptpay">
-            บัญชีที่โอนเงิน : พร้อมเพย์ 093-xxxxx7-0
-          </text>
+          <text className="promptpay">ธนาคารกสิกรไทย : หมายเลขบัญชี 141-x-xxxxx-0</text>
+          <text className="promptpay">บัญชีที่โอนเงิน : พร้อมเพย์ 093-xxxxx7-0</text>
           <text className="promptpay">ชื่อบัญชี บริษัท Puffertour</text>
-          <form onSubmit={handleImageUpload}>
-            <div className="input-container">
-              <label htmlFor="file-input" className="promptpay">
-                แนบไฟล์สลิปการโอนเงิน
-              </label>
-              <input
-                id="file-input"
-                type="file"
-                accept="image/*,.pdf"
-                onChange={handleFileSelect}
-              />
-            </div>
-            {selectedFile && (
-              <div className="limit-file">
-                <text>[ ไฟล์ jpg, gif, png, pdf ไม่เกิน 2MB ]</text>
-              </div>
-            )}
-            {!selectedFile && (
-              <div className="limit-file">
-                <text>[ กรุณาแนบไฟล์สลิปการโอนเงิน ]</text>
-              </div>
-            )}
-            <button className="button" type="submit" disabled={!selectedFile}>
-              ยืนยันการส่ง
-            </button>
-          </form>
+          <text className="promptpay">แจ้งการชำระเงินผ่านไลน์</text>
+          <img src="/Pictures/QRcodeline.jpg" className="img-QRline"/>
         </div>
       </div>
     </div>
