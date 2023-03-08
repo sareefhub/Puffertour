@@ -17,7 +17,7 @@
   margin: auto;
 }
 
-.card {
+.cardregister {
   width: 350px;
   height: 425px;
   border: 1px solid #ccc;
@@ -25,7 +25,7 @@
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   overflow: hidden;
   margin: 10px;
-  background-color: #fff; /* add this line */
+  background-color: #fff;
 }
 
 .card-header {

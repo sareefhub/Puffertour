@@ -34,7 +34,7 @@ function CardBooking(props: Props) {
         }
     
     return (
-        <div className="card">
+        <div className="cardbooking">
             <div className="title-card"> รายการ {tour_name} </div>
                 <div className="heading"> จำนวน {quantity} คน
                 <div className="heading"> ราคาทั้งหมด {total_price} บาท
