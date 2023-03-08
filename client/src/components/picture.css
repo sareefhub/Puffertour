@@ -29,3 +29,31 @@
     height: 150px;
     object-fit: cover;
   }
+  
+  @media screen and (max-width: 425px) {
+    .Picturecontainer {
+      gap: var(--dl-space-space-unit);
+      width: 100%;
+      height: 383px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .Pictureleft {
+      display: none;
+    }
+    .leftarrow {
+      display: none;
+    }
+    .Picturemiddle {
+      width: 400px;
+      height: 200px;
+      object-fit: cover;
+    }
+    .rightarrow {
+      display: none;
+    }
+    .Pictureright {
+      display: none;
+    }
+  }
