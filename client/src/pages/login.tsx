@@ -42,7 +42,7 @@ const Login: React.FC = () => {
 
   return (
     <div className="container">
-      <div className="image">
+      <div className="loginimage">
         <form className="form" onSubmit={handleSubmit}>
           <p className="heading">เข้าสู่ระบบ</p>
           <input
