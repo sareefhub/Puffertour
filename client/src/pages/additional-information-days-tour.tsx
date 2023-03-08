@@ -20,6 +20,7 @@ const AdditionalInformationDaysTour = () => {
   const [bookingDate, setBookingDate] = useState<Date | null>(null);
   const [quantity, setQuantity] = useState<number>(1);
   const [reviews, setReviews] = useState<Review[]>([]);
+  const [reviewtext, setReviewtext] = useState<string>("");
   
   const navigate = useNavigate();
   const params = useParams();
@@ -32,7 +33,7 @@ const AdditionalInformationDaysTour = () => {
     }
   };
   const fetchReview = async () => {
-    const rev = await Repository.ReviewData.getReview();
+    const rev = await Repository.ReviewData.getReview(tour_name);
     if (rev) {
       setReviews(rev);
     }
@@ -44,15 +45,14 @@ const AdditionalInformationDaysTour = () => {
 
   useEffect(() => {
     fetchReview();
-  }, []);
+  }, [reviews]);
 
   const tour = DataTour.length > 0 ? DataTour[0].attributes : null;
   const tourID = DataTour.length > 0 ? DataTour[0] : null;
   const tour_id = tourID?.id.toString() || 0;
-  const tour_name = tour?.name;
+  const tour_name = tour?.name as string;
   const total_price = tour?.price as number * quantity;
   const tour_seat = tour?.remaining as number
-  const Review = reviews.length > 0 ? reviews[0].attributes : null;
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const Datebooking = new Date(event.target.value);
@@ -65,6 +65,11 @@ const AdditionalInformationDaysTour = () => {
     if (NumPeople <= remainingSeats) {
       setQuantity(NumPeople);
     }
+  };
+
+  const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const ReviewText = event.target.value;
+    setReviewtext(ReviewText);
   };
   
   const seatLeft = tour?.remaining as number - quantity
@@ -93,7 +98,7 @@ const AdditionalInformationDaysTour = () => {
       user: user.username,
       tour_id: params.id as string,
       tour_name: tour_name as string,
-      review: Review?.review as string,
+      review: reviewtext,
     }
   }
 
@@ -117,6 +122,15 @@ const AdditionalInformationDaysTour = () => {
       navigate("/payment");
     }
   };
+
+  const handleReview = async () => {
+    if (!user) {
+      navigate('/login');
+    } else {
+      await Repository.ReviewData.createReview(newReview)
+    }
+  }
+
   return (
     <div className="information-days-tour-container">
       <Navbar />
@@ -177,11 +191,10 @@ const AdditionalInformationDaysTour = () => {
               </span>
             </button>
           </div>
-          <h2>รีวิวจากลูกค้า</h2>
+          <h2>รีวิวของทัวร์</h2>
           <div className="information-days-tour-container7">
             <div>
               <form>
-                
                   {reviews.map((item) => (
                   <ReviewCard ReviewData={item} />
                   ))}
@@ -200,7 +213,17 @@ const AdditionalInformationDaysTour = () => {
                     <input
                       type="text"
                       className="information-days-tour-textinput input"
+                      value={reviewtext}
+                      onChange={handleTextChange}
                     />
+                    <button
+                      className="information-days-tour-navlink6 button"
+                      onClick={handleReview}
+                    >
+                    <span className="information-days-tour-text18">
+                    <span>รีวิว</span>
+                    </span>
+                    </button>
                   </div>
                 </div>
               </form>

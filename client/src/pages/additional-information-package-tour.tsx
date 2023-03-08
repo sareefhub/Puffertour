@@ -10,11 +10,16 @@ import Swal from "sweetalert2";
 import { getUserData } from "../helper";
 import Payment from "../models/Payment";
 import SeatRemaining from "../models/seatRemaining";
+import ReviewData from "../models/Reviewdata";
+import ReviewCard from "../components/Review";
+import Review from "../models/Review";
 
 const AdditionalInformationPackageTour = () => {
   const [DataTour, setDataTour] = useState<Packagetour[]>([]);
   const [bookingDate, setBookingDate] = useState<Date | null>(null);
   const [quantity, setQuantity] = useState<number>(1);
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [reviewtext, setReviewtext] = useState<string>("");
   const navigate = useNavigate();
   const params = useParams();
   const user = getUserData();
@@ -25,15 +30,25 @@ const AdditionalInformationPackageTour = () => {
       setDataTour(result);
     }
   };
+  const fetchReview = async () => {
+    const rev = await Repository.ReviewData.getReview(tour_name);
+    if (rev) {
+      setReviews(rev);
+    }
+  };
 
   useEffect(() => {
     fetchData();
   }, [params.id]);
 
+  useEffect(() => {
+    fetchReview();
+  }, [reviews]);
+
   const tour = DataTour.length > 0 ? DataTour[0].attributes : null;
   const tourID = DataTour.length > 0 ? DataTour[0] : null;
   const tour_id = tourID?.id.toString() || 0;
-  const tour_name = tour?.name;
+  const tour_name = tour?.name as string;
   const total_price = tour?.price as number * quantity;
   const tour_seat = tour?.remaining
 
@@ -48,6 +63,11 @@ const AdditionalInformationPackageTour = () => {
     if (NumPeople <= remainingSeats) {
       setQuantity(NumPeople);
     }
+  };
+
+  const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const ReviewText = event.target.value;
+    setReviewtext(ReviewText);
   };
   
   const seatLeft = tour?.remaining as number - quantity
@@ -71,6 +91,14 @@ const AdditionalInformationPackageTour = () => {
       seat: tour_seat as number
     }
   }
+  const newReview: ReviewData = {
+    data : {
+      user: user.username,
+      tour_id: params.id as string,
+      tour_name: tour_name as string,
+      review: reviewtext,
+    }
+  }
 
   const handleReservation = async () => {
     if (!user) {
@@ -92,6 +120,15 @@ const AdditionalInformationPackageTour = () => {
       navigate("/payment");
     }
   };
+
+  const handleReview = async () => {
+    if (!user) {
+      navigate('/login');
+    } else {
+      await Repository.ReviewData.createReview(newReview)
+    }
+  }
+
   return (
     <div className="information-package-tour-container">
       <Navbar />
@@ -152,41 +189,39 @@ const AdditionalInformationPackageTour = () => {
               </span>
             </button>
           </div>
-          <h2>รีวิวจากลูกค้า</h2>
+          <h2>รีวิวของทัวร์</h2>
           <div className="information-package-tour-container7">
             <div>
               <form>
-                <span>
-                  <span>
-                    คุณ Sola : ไกด์นำทัวร์ดีมากเลยครับ ไว้จะมาใช้บริการอีกนะครับ
-                  </span>
-                  <br></br>
-                  <span>
-                    คุณ Warunyu : สนุกๆสุดเลยครับ คุ้มค่ากับเงินที่เสียไปจริงๆ!
-                  </span>
-                  <br></br>
-                  <span>
-                    คุณ Navaphon : สถานที่ท่องเที่ยวสวยมากเลยครับ
-                    ไว้วันหลังจะมาอีก
-                  </span>
-                  <br></br>
-                  <span>คุณ Sareef : ดีมากครับ</span>
-                </span>
+              {reviews.map((item) => (
+                  <ReviewCard ReviewData={item} />
+                  ))}
+                
                 <div>
-                  <div className="information-package-tour-container8">
-                    <div className="information-package-tour-container9">
+                  <div className="information-days-tour-container8">
+                    <div className="information-days-tour-container9">
                       <svg
                         viewBox="0 0 1024 1024"
-                        className="information-package-tour-icon"
+                        className="information-days-tour-icon"
                       >
                         <path d="M512 820q68 0 143-40t113-98q-2-56-90-94t-166-38-166 37-90 95q38 58 113 98t143 40zM512 214q-52 0-90 38t-38 90 38 90 90 38 90-38 38-90-38-90-90-38zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
                       </svg>
-                      <span className="information-package-tour-text">: </span>
+                      <span className="information-days-tour-text">: </span>
                     </div>
                     <input
                       type="text"
-                      className="information-package-tour-textinput input"
+                      className="information-days-tour-textinput input"
+                      value={reviewtext}
+                      onChange={handleTextChange}
                     />
+                    <button
+                      className="information-days-tour-navlink6 button"
+                      onClick={handleReview}
+                    >
+                    <span className="information-days-tour-text18">
+                    <span>รีวิว</span>
+                    </span>
+                    </button>
                   </div>
                 </div>
               </form>
