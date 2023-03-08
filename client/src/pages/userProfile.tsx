@@ -10,6 +10,9 @@ const UserProfile:React.FC = (props) => {
   return (
     <div className="user-container">
       <Navbar />
+      <div className="payment-container04">
+        <span className="payment-text01">ข้อมูลส่วนตัว</span>
+      </div>
       <div className="cardd-container">
         <div className="cardd1">
           <img src="./pictures/Profileuser.png" alt="Admin" className="rounded-circle" width="150" />
