@@ -13,10 +13,9 @@ const HowToBook: React.FC = (props) => {
     <div className="how-to-book-container">
         <Navbar />
         <Picture/>
-        <div className="tap-bar">
-          <span className="text-tour">วิธีการจอง</span>
+        <div className="payment-container04">
+          <span className="payment-text01">วิธีการจอง</span>
         </div>
-      <div className="how-to-book-container6">
         <form className="how-to-book-form09">
           <span className="how-to-book-text2">
             <span>1.กดเข้าไปที่ ดูข้อมูลเพิ่มเติม ทัวร์ต้องการ</span>
@@ -33,7 +32,6 @@ const HowToBook: React.FC = (props) => {
             พร้อมแนบสลิปเพื่อเป็นหลักฐานในการชำระเงิน
           </span>
         </form>
-      </div>
       <div className="how-to-book-container7">
         <form className="how-to-book-form10">
           <h4 className="how-to-book-text8">อยากจะจองทัวร์ใช่ใหม?</h4>
