@@ -53,6 +53,7 @@ const AdditionalInformationDaysTour = () => {
   const tour_name = tour?.name as string;
   const total_price = tour?.price as number * quantity;
   const tour_seat = tour?.remaining as number
+  const image = `http://localhost:1337${tour?.cover_image.data.attributes.formats.thumbnail.url}`
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const Datebooking = new Date(event.target.value);
@@ -90,7 +91,8 @@ const AdditionalInformationDaysTour = () => {
       quantity: quantity,
       total_price: total_price,
       type: 'oneday',
-      seat: tour_seat
+      seat: tour_seat,
+      image: image
     }
   }
   const newReview: ReviewData = {
