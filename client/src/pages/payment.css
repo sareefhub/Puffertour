@@ -116,10 +116,10 @@
     height: var(--dl-size-size-tripleunit);
     font-family: Pridi;
   }
-
-  .limit-file {
-    color: rgb(255, 0, 0);
-    font-family: Pridi;
+  
+  .img-QRline {
+    width: 100px;
+    height: 100px;
   }
 
   .button {
