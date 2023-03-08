@@ -6,15 +6,15 @@ import "./Navbar.css";
 
 const Navbar: React.FC = (props) => {
   const navigate = useNavigate();
-  const user = getUserData()
+  const user = getUserData();
   const [activeLink, setActiveLink] = useState("");
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-  
+
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const clickedLink = event.currentTarget;
     const clickedLinkText = clickedLink.textContent || "";
     setActiveLink(clickedLinkText);
-  
+
     if (clickedLinkText === "แจ้งชำระเงิน" && !CheckUserToken()) {
       event.preventDefault();
       navigate("/login");
@@ -53,10 +53,16 @@ const Navbar: React.FC = (props) => {
   return (
     <header className="navbar_container">
       <div className="Logo">
-        <img alt="" src='/pictures/logotour.png' className="home-image" />
+        <img alt="" src="/pictures/logotour.png" className="home-image" />
         <span className="home-text">uffertour</span>
       </div>
       <div className="menu_container">
+        <label htmlFor="burger" className="burger">
+          <input id="burger" type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
         <ul>
           <li>
             <a href="/home" onClick={handleLinkClick} className="home-navlink">
@@ -100,12 +106,12 @@ const Navbar: React.FC = (props) => {
             {CheckUserToken() && (
               <div className="action">
                 <div className="Profileuser" onClick={handleProfileClick}>
-                  <img src='/Pictures/Profileuser.png' alt="" />
+                  <img src="/Pictures/Profileuser.png" alt="" />
                   <span>{user.username}</span>
                 </div>
                 {isDropdownVisible && (
                   <div className="dropdown">
-                    <a href="/userProfile" >ข้อมูลส่วนตัว</a>
+                    <a href="/userProfile">ข้อมูลส่วนตัว</a>
                     <a href="/booking-history">ประวัติการจอง</a>
                     <a href="/home" onClick={handleLogout}>
                       ออกจากระบบ
