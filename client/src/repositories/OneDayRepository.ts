@@ -2,12 +2,11 @@ import { IRepository } from "./IRepository"
 import OneDay from "../models/OneDay"
 import SeatRemaining from "../models/seatRemaining"
 import { getUserData } from "../helper";
-import conf from "../conf";
 
 const user = getUserData()
 
 export class OneDayRepository implements IRepository<OneDay | SeatRemaining>{
-    urlPrefix = `${conf.apiPrefix}/one-days`
+    urlPrefix = `http://localhost:1337/api/one-days`
     token = user.jwt
 
     async get(id: string): Promise<OneDay[] | null> {
