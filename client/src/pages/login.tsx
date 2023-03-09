@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { storeUser } from "../helper";
+import conf from "../conf";
 
 import "./login.css";
 
@@ -12,7 +13,7 @@ const Login: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:1337/api/auth/local", {
+    const response = await fetch(`${conf.apiPrefix}/api/auth/local`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

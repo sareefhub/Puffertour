@@ -2,11 +2,16 @@ import { IRepository } from "./IRepository"
 import Package from '../models/Package'
 import SeatRemaining from "../models/seatRemaining"
 import { getUserData } from "../helper";
+import conf from "../conf";
 
 const user = getUserData()
 
 export class PackageRepository implements IRepository<Package | SeatRemaining>{
+<<<<<<< HEAD
     urlPrefix = `http://localhost:1337/api/attractions`
+=======
+    urlPrefix = `${conf.apiPrefix}/api/attractions`
+>>>>>>> d216aa0 (แก้ไข path)
     token = user.jwt
 
     async get(id: string): Promise<Package[] | null> {

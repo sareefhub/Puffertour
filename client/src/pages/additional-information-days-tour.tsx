@@ -13,6 +13,7 @@ import SeatRemaining from "../models/seatRemaining";
 import ReviewData from "../models/Reviewdata";
 import ReviewCard from "../components/Review";
 import Review from "../models/Review";
+import conf from "../conf";
 
 const AdditionalInformationDaysTour = () => {
 
@@ -53,7 +54,7 @@ const AdditionalInformationDaysTour = () => {
   const tour_name = tour?.name as string;
   const total_price = tour?.price as number * quantity;
   const tour_seat = tour?.remaining as number
-  const image = `http://localhost:1337${tour?.cover_image.data.attributes.formats.thumbnail.url}`
+  const image = ` ${conf.apiPrefix}/{tour?.cover_image.data.attributes.formats.thumbnail.url}`
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const Datebooking = new Date(event.target.value);
