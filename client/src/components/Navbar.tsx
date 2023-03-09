@@ -58,21 +58,34 @@ const Navbar: React.FC = (props) => {
       </div>
       <div className="menu_container">
       <div className="dropdownb">
-        <div className="burger">
-        <img src="/Pictures/hamburgericon.jpg" alt="" />
-        </div>
-        <ul className="dropdown-content">
-          <li><a href="/home">หน้าแรก</a></li>
-          <li><a href="/days-tour">ทัวร์รายวัน</a></li>
-          <li><a href="/package-tour">แพ็กเกจทัวร์</a></li>
-          <li><a href="/how-to-book">วิธีการจอง</a></li>
-          <li><a href="/payment">แจ้งชำระเงิน</a></li>
-          <li><a href="/about-us">ติดต่อเรา</a></li>
-          <li><a href="/userProfile">ข้อมูลส่วนตัว</a></li>
-          <li><a href="/booking-history">ประวัติการจอง</a></li>
-          <li><a href="/home">ออกจากระบบ</a></li>
-        </ul>
-        </div>
+  <div className="burger">
+    <img src="/Pictures/hamburgericon.jpg" alt="" />
+  </div>
+  {CheckUserToken() ? (
+    <ul className="dropdown-content">
+      <li><a href="/home" onClick={handleLinkClick}>หน้าแรก</a></li>
+      <li><a href="/days-tour" onClick={handleLinkClick}>ทัวร์รายวัน</a></li>
+      <li><a href="/package-tour" onClick={handleLinkClick}>แพ็กเกจทัวร์</a></li>
+      <li><a href="/how-to-book" onClick={handleLinkClick}>วิธีการจอง</a></li>
+      <li><a href="/payment" onClick={handleLinkClick}>แจ้งชำระเงิน</a></li>
+      <li><a href="/about-us" onClick={handleLinkClick}>ติดต่อเรา</a></li>
+      <li><a href="/userProfile" onClick={handleLinkClick}>ข้อมูลส่วนตัว</a></li>
+      <li><a href="/booking-history" onClick={handleLinkClick}>ประวัติการจอง</a></li>
+      <li><a href="/home" onClick={handleLogout}>ออกจากระบบ</a></li>
+    </ul>
+  ) : (
+    <ul className="dropdown-content">
+      <li><a href="/home" onClick={handleLinkClick}>หน้าแรก</a></li>
+      <li><a href="/days-tour" onClick={handleLinkClick}>ทัวร์รายวัน</a></li>
+      <li><a href="/package-tour" onClick={handleLinkClick}>แพ็กเกจทัวร์</a></li>
+      <li><a href="/how-to-book" onClick={handleLinkClick}>วิธีการจอง</a></li>
+      <li><a href="/payment" onClick={handleLinkClick}>แจ้งชำระเงิน</a></li>
+      <li><a href="/about-us" onClick={handleLinkClick}>ติดต่อเรา</a></li>
+      <li><a href="/login" onClick={handleLinkClick}>เข้าสู่ระบบ</a></li>
+      <li><a href="/register" onClick={handleLinkClick}>สมัครสมาชิก</a></li>
+    </ul>
+  )}
+</div>
         <ul>
           <li>
             <a href="/home" onClick={handleLinkClick} className="home-navlink">
