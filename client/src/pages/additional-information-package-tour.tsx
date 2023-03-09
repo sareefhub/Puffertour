@@ -13,6 +13,7 @@ import SeatRemaining from "../models/seatRemaining";
 import ReviewData from "../models/Reviewdata";
 import ReviewCard from "../components/Review";
 import Review from "../models/Review";
+import conf from "../conf";
 
 const AdditionalInformationPackageTour = () => {
   const [DataTour, setDataTour] = useState<Packagetour[]>([]);
@@ -51,7 +52,7 @@ const AdditionalInformationPackageTour = () => {
   const tour_name = tour?.name as string;
   const total_price = tour?.price as number * quantity;
   const tour_seat = tour?.remaining
-  const image = `http://localhost:1337${tour?.cover_image.data.attributes.formats.thumbnail.url}`
+  const image = `${conf.apiPrefix}${tour?.cover_image.data.attributes.formats.thumbnail.url}`
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const Datebooking = new Date(event.target.value);
@@ -135,18 +136,18 @@ const AdditionalInformationPackageTour = () => {
     <div className="information-package-tour-container">
       <Navbar />
       <Picture />
-      <div className="tap-bar">
-        <span className="text-tour">{tour?.name}</span>
+      <div className="payment-container04">
+        <span className="package-text01">{tour?.name}</span>
       </div>
       <div className="information-package-tour-container1">
         <div className="information-package-tour-container2">
-          <h2>โปรแกรมทัวร์{tour?.name}</h2>
+          <h2>โปรแกรมทัวร์</h2>
           <div className="information-package-tour-container3">
             <p>{tour?.tour_program}</p>
           </div>
         </div>
         <div className="information-package-tour-container4">
-        <h2>สิ่งที่รวมในทัวร์{tour?.name}</h2>
+        <h2>สิ่งที่รวมในทัวร์</h2>
           <div className="information-package-tour-container6">
             <p>{tour?.service}</p>
           </div>
@@ -191,7 +192,7 @@ const AdditionalInformationPackageTour = () => {
               </span>
             </button>
           </div>
-          <h2>รีวิวของทัวร์</h2>
+          <h2>รีวิว</h2>
           <div className="information-package-tour-container7">
             <div>
               <form>
@@ -216,14 +217,9 @@ const AdditionalInformationPackageTour = () => {
                       value={reviewtext}
                       onChange={handleTextChange}
                     />
-                    <button
-                      className="information-package-tour-navlink6 button"
-                      onClick={handleReview}
-                    >
-                    <span className="information-package-tour-text18">
-                    <span>รีวิว</span>
-                    </span>
-                    </button>
+                    <div className="plane" onClick={handleReview}>
+                    <img src="/pictures/planeicon (2).png" alt="" />
+                    </div>
                   </div>
                 </div>
               </form>

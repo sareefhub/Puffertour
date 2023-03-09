@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import conf from '../conf';
 
 import './register.css';
 
@@ -26,7 +27,7 @@ const Register: React.FC = () => {
     }
   
     try {
-      const response = await axios.post('http://localhost:1337/api/auth/local/register', {
+      const response = await axios.post(`${conf.apiPrefix}/api/auth/local/register`, {
         username,
         email,
         password,

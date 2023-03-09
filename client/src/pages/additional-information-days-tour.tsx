@@ -13,6 +13,7 @@ import SeatRemaining from "../models/seatRemaining";
 import ReviewData from "../models/Reviewdata";
 import ReviewCard from "../components/Review";
 import Review from "../models/Review";
+import conf from "../conf";
 
 const AdditionalInformationDaysTour = () => {
 
@@ -53,7 +54,7 @@ const AdditionalInformationDaysTour = () => {
   const tour_name = tour?.name as string;
   const total_price = tour?.price as number * quantity;
   const tour_seat = tour?.remaining as number
-  const image = `http://localhost:1337${tour?.cover_image.data.attributes.formats.thumbnail.url}`
+  const image = `${conf.apiPrefix}${tour?.cover_image.data.attributes.formats.thumbnail.url}`
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const Datebooking = new Date(event.target.value);
@@ -137,16 +138,16 @@ const AdditionalInformationDaysTour = () => {
     <div className="information-days-tour-container">
       <Navbar />
       <Picture />
-      <div className="tap-bar">
-        <span className="text-tour">{tour?.name}</span>
+      <div className="payment-container04">
+        <span className="payment-text01">{tour?.name}</span>
       </div>
       <div className="information-days-tour-container1">
         <div className="information-days-tour-container2">
-          <h2>โปรแกรมทัวร์{tour?.name}</h2>
+          <h2>โปรแกรมทัวร์</h2>
           <div className="information-days-tour-container3">
             <p>{tour?.tour_program}</p>
           </div>
-          <h2>สิ่งที่รวมในทัวร์{tour?.name}</h2>
+          <h2>สิ่งที่รวมในทัวร์</h2>
           <div className="information-days-tour-container6">
             <p>{tour?.service}</p>
           </div>
@@ -193,7 +194,7 @@ const AdditionalInformationDaysTour = () => {
               </span>
             </button>
           </div>
-          <h2>รีวิวของทัวร์</h2>
+          <h2>รีวิว</h2>
           <div className="information-days-tour-container7">
             <div>
               <form>
@@ -218,14 +219,9 @@ const AdditionalInformationDaysTour = () => {
                       value={reviewtext}
                       onChange={handleTextChange}
                     />
-                    <button
-                      className="information-days-tour-navlink6 button"
-                      onClick={handleReview}
-                    >
-                    <span className="information-days-tour-text18">
-                    <span>รีวิว</span>
-                    </span>
-                    </button>
+                    <div className="plane" onClick={handleReview}>
+                    <img src="/pictures/planeicon (2).png" alt="" />
+                    </div>
                   </div>
                 </div>
               </form>

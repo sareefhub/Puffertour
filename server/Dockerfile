@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 FROM strapi/base
+=======
+FROM node:16-alpine
+>>>>>>> fix
 
 WORKDIR /app
 
@@ -12,4 +16,8 @@ RUN npm run build
 
 EXPOSE 1337
 
+<<<<<<< HEAD
 CMD [ "npm", "start"]
+=======
+CMD ["npm", "start"]
+>>>>>>> fix

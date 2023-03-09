@@ -113,4 +113,8 @@ exports
 dist
 build
 .strapi-updater.json
+<<<<<<< HEAD
 Dockerfile
+=======
+Dockerfile
+>>>>>>> fix

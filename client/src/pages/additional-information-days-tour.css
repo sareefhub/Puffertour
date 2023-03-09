@@ -26,7 +26,7 @@
 
 .information-days-tour-container3 {
   width: 80%;
-  height: 30%;
+  height: auto;
   background-color: white;
   border-radius: 20px;
   font-size: 25px;
@@ -65,7 +65,7 @@
 }
 .information-days-tour-container6 {
   width: 80%;
-  height: 170px;
+  height: auto;
   background-color: white;
   border-radius: 20px;
   font-size: 23px;
@@ -114,4 +114,41 @@
 .information-days-tour-textinput {
   width: 427px;
   align-self: center;
+}
+.plane img{
+  margin-top: 12px;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 425px) {
+  .information-days-tour-container1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .information-days-tour-container2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 58px;
+  }
+  .information-days-tour-container4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 58px;
+  }
+  .plane img{
+    margin-top: 12px;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+  }
 }
