@@ -1,0 +1,47 @@
+version: '3'
+services:
+  demo_mysql:
+    container_name: demo-mysql
+    image: mysql/mysql-server
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: demo
+      MYSQL_ROOT_PASSWORD: C&%f1#gHd^T8P@kL9q
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - 127.0.0.1:3306:3306
+    volumes:
+      - ./data:/var/lib/mysql
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    restart: always
+    networks:
+      - demo
+
+  app:
+    build:
+      context: ./my-server
+    container_name: demo-app
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      DATABASE_CLIENT: mysql
+      DATABASE_HOST: demo_mysql
+      DATABASE_PORT: 3306
+      DATABASE_NAME: demo
+      DATABASE_USERNAME: root
+      DATABASE_PASSWORD: Tourismpasswd23^*
+      APP_KEYS: a59b2907f1d3fb03265e9d2b8e91dcd5d5c04b7e5e5c1d0310e4bfb1b4cc44bc
+      JWT_SECRET: 8f91ff2f246edcc476a4a1738d7d4b4c4aa4f1ddcb14e96360a24ccbe10f2c20
+      ADMIN_JWT_SECRET: 1e4f4d54f74a187ed209a364ecf63da78e8df844e9b09d97b2c3b1f43d3c8743
+      API_TOKEN_SALT: 3e89f8f2153d9f206c0fc822df237a83b99fc1eb3470d5aa6de5b6ca085201a7
+    volumes:
+      - ./app:/srv/app
+    ports:
+      - 127.0.0.1:8000:1337
+    depends_on:
+      - demo_mysql
+    networks:
+      - demo
+networks:
+  demo:
