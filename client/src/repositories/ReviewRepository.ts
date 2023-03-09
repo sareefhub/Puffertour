@@ -7,7 +7,7 @@ import conf from "../conf";
 const user = getUserData()
 
 export class ReviewRepository implements IRepository<Review | ReviewData>{
-    urlPrefix = `${conf.apiPrefix}/reviews`
+    urlPrefix = `${conf.apiPrefix}/api/reviews`
     token = user.jwt
 
     async getReview(tourName: string): Promise<Review[] | null> {
