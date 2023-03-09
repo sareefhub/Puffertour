@@ -8,10 +8,14 @@ const user = getUserData()
 
 export class ReviewRepository implements IRepository<Review | ReviewData>{
 <<<<<<< HEAD
+<<<<<<< HEAD
     urlPrefix = `http://localhost:1337/api/review`
 =======
     urlPrefix = `${conf.apiPrefix}/api/reviews`
 >>>>>>> d216aa0 (แก้ไข path)
+=======
+    urlPrefix = `${conf.apiPrefix}/reviews`
+>>>>>>> c03127c (ทดสอบเพิ่มข้อมูล strapi)
     token = user.jwt
 
     async getReview(tourName: string): Promise<Review[] | null> {
