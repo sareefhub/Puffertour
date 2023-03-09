@@ -9,6 +9,7 @@ const user = getUserData()
 export class PackageRepository implements IRepository<Package | SeatRemaining>{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     urlPrefix = `http://localhost:1337/api/attractions`
 =======
     urlPrefix = `${conf.apiPrefix}/api/attractions`
@@ -16,6 +17,9 @@ export class PackageRepository implements IRepository<Package | SeatRemaining>{
 =======
     urlPrefix = `${conf.apiPrefix}/attractions`
 >>>>>>> c03127c (ทดสอบเพิ่มข้อมูล strapi)
+=======
+    urlPrefix = `${conf.apiPrefix}/api/attractions`
+>>>>>>> cfe83a8 (แก้ไข path)
     token = user.jwt
 
     async get(id: string): Promise<Package[] | null> {

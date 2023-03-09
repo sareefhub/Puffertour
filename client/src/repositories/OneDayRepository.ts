@@ -9,6 +9,7 @@ const user = getUserData()
 export class OneDayRepository implements IRepository<OneDay | SeatRemaining>{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     urlPrefix = `http://localhost:1337/api/one-days`
 =======
     urlPrefix = `${conf.apiPrefix}/api/one-days`
@@ -16,6 +17,9 @@ export class OneDayRepository implements IRepository<OneDay | SeatRemaining>{
 =======
     urlPrefix = `${conf.apiPrefix}/one-days`
 >>>>>>> c03127c (ทดสอบเพิ่มข้อมูล strapi)
+=======
+    urlPrefix = `${conf.apiPrefix}/api/one-days`
+>>>>>>> cfe83a8 (แก้ไข path)
     token = user.jwt
 
     async get(id: string): Promise<OneDay[] | null> {

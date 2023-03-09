@@ -10,7 +10,7 @@ interface Props {
 function PackageCard(props: Props) {
     const navigate = useNavigate();
     const tour = props.Tour.attributes
-    const img = `https://s04x.coe.psu.ac.th${tour.cover_image.data.attributes.formats.thumbnail.url}`
+    const img = `${conf.apiPrefix}${tour.cover_image.data.attributes.formats.thumbnail.url}`
 
     return (
         <div className="card">
