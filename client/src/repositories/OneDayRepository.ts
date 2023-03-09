@@ -7,7 +7,7 @@ import conf from "../conf";
 const user = getUserData()
 
 export class OneDayRepository implements IRepository<OneDay | SeatRemaining>{
-    urlPrefix = "`${conf.apiPrefix}/one-days"
+    urlPrefix = `${conf.apiPrefix}/one-days`
     token = user.jwt
 
     async get(id: string): Promise<OneDay[] | null> {
