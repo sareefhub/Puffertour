@@ -7,7 +7,7 @@ import "./payment.css";
 const Payment = () => {
   const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState<File | undefined>(undefined);
-  
+
   return (
     <div className="payment-container">
       <Navbar />
@@ -31,7 +31,7 @@ const Payment = () => {
           <text className="promptpay">บัญชีที่โอนเงิน : พร้อมเพย์ 093-xxxxx7-0</text>
           <text className="promptpay">ชื่อบัญชี บริษัท Puffertour</text>
           <text className="promptpay">แจ้งการชำระเงินผ่านไลน์</text>
-          <img src="/Pictures/QRcodeline.jpg" className="img-QRline"/>
+          <img src="/pictures/QRcodeline.jpg" className="img-QRline"/>
         </div>
       </div>
     </div>
