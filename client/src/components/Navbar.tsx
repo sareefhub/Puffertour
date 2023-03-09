@@ -59,7 +59,7 @@ const Navbar: React.FC = (props) => {
       <div className="menu_container">
       <div className="dropdownb">
   <div className="burger">
-    <img src="/Pictures/hamburgericon.jpg" alt="" />
+    <img src="/pictures/hamburgericon.jpg" alt="" />
   </div>
   {CheckUserToken() ? (
     <ul className="dropdown-content">
