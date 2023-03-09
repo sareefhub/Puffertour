@@ -5,7 +5,7 @@
 
 .card {
     width: 300px;
-    height: 380px;
+    height: auto;
     background: white;
     padding: .4em;
     border-radius: 20px;
