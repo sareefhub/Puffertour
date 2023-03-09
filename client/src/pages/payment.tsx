@@ -7,56 +7,7 @@ import "./payment.css";
 const Payment = () => {
   const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState<File | undefined>(undefined);
-
-  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file && file.size > 2 * 1024 * 1024) {
-      Swal.fire({
-        icon: "error",
-        title: "File size too large",
-        text: "Please select a file that is smaller than 2MB",
-      });
-    } else {
-      setSelectedFile(file);
-    }
-  };
   
-  const handleImageUpload = async () => {
-    if (!selectedFile) {
-      Swal.fire({
-        icon: "error",
-        title: "No file selected",
-        text: "Please select a file to upload",
-      });
-      return;
-    }
-
-    const formData = new FormData();
-    formData.append("image", selectedFile);
-
-    try {
-      const response = await fetch("/api/upload-image", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (response.ok) {
-        navigate("/booking-history");
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Error uploading image",
-          text: "Please try again later",
-        });
-      }
-    } catch (error) {
-      Swal.fire({
-        icon: "error",
-        title: "Error uploading image",
-        text: "Please try again later",
-      });
-    }
-  };
   return (
     <div className="payment-container">
       <Navbar />
