@@ -124,3 +124,28 @@
   width: 427px;
   align-self: center;
 }
+
+@media screen and (max-width: 425px){
+  .information-package-tour-container1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .information-package-tour-container2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 58px;
+  }
+  .information-package-tour-container4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 58px;
+  }
+}

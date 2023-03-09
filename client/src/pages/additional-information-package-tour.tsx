@@ -135,8 +135,8 @@ const AdditionalInformationPackageTour = () => {
     <div className="information-package-tour-container">
       <Navbar />
       <Picture />
-      <div className="tap-bar">
-        <span className="text-tour">{tour?.name}</span>
+      <div className="payment-container04">
+        <span className="payment-text01">{tour?.name}</span>
       </div>
       <div className="information-package-tour-container1">
         <div className="information-package-tour-container2">
