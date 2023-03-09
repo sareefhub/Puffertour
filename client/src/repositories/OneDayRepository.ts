@@ -10,6 +10,7 @@ export class OneDayRepository implements IRepository<OneDay | SeatRemaining>{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     urlPrefix = `http://localhost:1337/api/one-days`
 =======
     urlPrefix = `${conf.apiPrefix}/api/one-days`
@@ -20,6 +21,10 @@ export class OneDayRepository implements IRepository<OneDay | SeatRemaining>{
 =======
     urlPrefix = `${conf.apiPrefix}/api/one-days`
 >>>>>>> cfe83a8 (แก้ไข path)
+=======
+
+    urlPrefix = `${conf.apiPrefix}/api/one-days`
+>>>>>>> ef97058 (แก้ config ที่เกิดจากการ merge)
     token = user.jwt
 
     async get(id: string): Promise<OneDay[] | null> {

@@ -10,6 +10,7 @@ export class ReviewRepository implements IRepository<Review | ReviewData>{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     urlPrefix = `http://localhost:1337/api/review`
 =======
     urlPrefix = `${conf.apiPrefix}/api/reviews`
@@ -20,6 +21,10 @@ export class ReviewRepository implements IRepository<Review | ReviewData>{
 =======
     urlPrefix = `${conf.apiPrefix}/api/reviews`
 >>>>>>> cfe83a8 (แก้ไข path)
+=======
+
+    urlPrefix = `${conf.apiPrefix}/api/reviews`
+>>>>>>> ef97058 (แก้ config ที่เกิดจากการ merge)
     token = user.jwt
     
     async getReview(tourName: string): Promise<Review[] | null> {

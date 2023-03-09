@@ -11,6 +11,7 @@ export class PaymentRepository implements IRepository<Payment | ReserveStatus>{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     urlPrefix = `http://localhost:1337/api/payments`
 =======
     urlPrefix = `${conf.apiPrefix}/api/payments`
@@ -21,6 +22,10 @@ export class PaymentRepository implements IRepository<Payment | ReserveStatus>{
 =======
     urlPrefix = `${conf.apiPrefix}/api/payments`
 >>>>>>> cfe83a8 (แก้ไข path)
+=======
+
+    urlPrefix = `${conf.apiPrefix}/api/payments`
+>>>>>>> ef97058 (แก้ config ที่เกิดจากการ merge)
     token = user.jwt
 
     async getByUser(): Promise<ReserveStatus[] | null> {
