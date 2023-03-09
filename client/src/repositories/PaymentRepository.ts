@@ -8,7 +8,7 @@ import conf from "../conf";
 const user = getUserData()
 
 export class PaymentRepository implements IRepository<Payment | ReserveStatus>{
-    urlPrefix = "`${conf.apiPrefix}/payments"
+    urlPrefix = `${conf.apiPrefix}/payments`
     token = user.jwt
 
     async getByUser(): Promise<ReserveStatus[] | null> {

@@ -8,7 +8,7 @@ import conf from "../conf";
 const user = getUserData()
 
 export class PackageRepository implements IRepository<Package | SeatRemaining>{
-    urlPrefix = "`${conf.apiPrefix}/attractions"
+    urlPrefix = `${conf.apiPrefix}/attractions`
     token = user.jwt
 
     async get(id: string): Promise<Package[] | null> {
