@@ -30,7 +30,11 @@ services:
       DATABASE_PORT: 3306
       DATABASE_NAME: demo
       DATABASE_USERNAME: root
+<<<<<<< HEAD
       DATABASE_PASSWORD: Tourismpasswd23^*
+=======
+      DATABASE_PASSWORD: C&%f1#gHd^T8P@kL9q
+>>>>>>> f66859a (setup)
       APP_KEYS: a59b2907f1d3fb03265e9d2b8e91dcd5d5c04b7e5e5c1d0310e4bfb1b4cc44bc
       JWT_SECRET: 8f91ff2f246edcc476a4a1738d7d4b4c4aa4f1ddcb14e96360a24ccbe10f2c20
       ADMIN_JWT_SECRET: 1e4f4d54f74a187ed209a364ecf63da78e8df844e9b09d97b2c3b1f43d3c8743
@@ -44,4 +48,8 @@ services:
     networks:
       - demo
 networks:
+<<<<<<< HEAD
   demo:
+=======
+  demo:
+>>>>>>> f66859a (setup)
