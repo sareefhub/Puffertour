@@ -57,12 +57,22 @@ const Navbar: React.FC = (props) => {
         <span className="home-text">uffertour</span>
       </div>
       <div className="menu_container">
-        <label htmlFor="burger" className="burger">
-          <input id="burger" type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
+      <div className="dropdownb">
+        <div className="burger">
+        <img src="/Pictures/hamburgericon.jpg" alt="" />
+        </div>
+        <ul className="dropdown-content">
+          <li><a href="/home">หน้าแรก</a></li>
+          <li><a href="/days-tour">ทัวร์รายวัน</a></li>
+          <li><a href="/package-tour">แพ็กเกจทัวร์</a></li>
+          <li><a href="/how-to-book">วิธีการจอง</a></li>
+          <li><a href="/payment">แจ้งชำระเงิน</a></li>
+          <li><a href="/about-us">ติดต่อเรา</a></li>
+          <li><a href="/userProfile">ข้อมูลส่วนตัว</a></li>
+          <li><a href="/booking-history">ประวัติการจอง</a></li>
+          <li><a href="/home">ออกจากระบบ</a></li>
+        </ul>
+        </div>
         <ul>
           <li>
             <a href="/home" onClick={handleLinkClick} className="home-navlink">
@@ -110,7 +120,7 @@ const Navbar: React.FC = (props) => {
                   <span>{user.username}</span>
                 </div>
                 {isDropdownVisible && (
-                  <div className="dropdown">
+                  <div className="dropdownp">
                     <a href="/userProfile">ข้อมูลส่วนตัว</a>
                     <a href="/booking-history">ประวัติการจอง</a>
                     <a href="/home" onClick={handleLogout}>
