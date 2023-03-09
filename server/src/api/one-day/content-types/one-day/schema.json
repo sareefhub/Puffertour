@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "one_days",
+  "info": {
+    "singularName": "one-day",
+    "pluralName": "one-days",
+    "displayName": "One-day",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tour_program": {
+      "type": "text"
+    },
+    "service": {
+      "type": "text"
+    },
+    "price": {
+      "type": "string"
+    },
+    "remaining": {
+      "type": "integer"
+    }
+  }
+}

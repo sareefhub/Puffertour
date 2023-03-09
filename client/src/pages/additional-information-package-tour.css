@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.information-package-tour-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #e8e8e8;
+  justify-content: center;
+}
+
+.information-package-tour-container1 {
+  width: 100%;
+  display: flex;
+}
+
+.information-package-tour-container2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 58px;
+}
+
+.information-package-tour-container3 {
+  width: 80%;
+  height: 40%;
+  background-color: white;
+  border-radius: 20px;
+  font-size: 25px;
+  margin: 30px;
+  padding: 60px;
+}
+
+.information-package-tour-container4 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 58px;
+}
+
+.information-package-tour-container5 {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background-color: white;
+  border-radius: 20px;
+  font-size: 23px;
+  margin: 30px;
+  padding: 40px;
+}
+.Text{
+  margin-top: -40px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.Tourday{
+  font-size: 20px;
+}
+.input{
+  width: 150px;
+}
+.date-input{
+  font-size: 25px;
+  margin-top: 20px;
+}
+.Text2{
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.information-package-tour-container6 {
+  width: 80%;
+  background-color: white;
+  border-radius: 20px;
+  font-size: 23px;
+  margin: 30px;
+  padding: 40px;
+}
+
+.information-package-tour-container7 {
+  width: 80%;
+  background-color: white;
+  border-radius: 20px;
+  font-size: 23px;
+  margin: 30px;
+  padding: 40px;
+}
+.information-package-tour-navlink6 {
+  width: 150px;
+  height: 45px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+.information-package-tour-container8 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 51px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.information-package-tour-container9 {
+  width: auto;
+  height: 51px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.information-package-tour-icon {
+  width: 54px;
+  height: 45px;
+  align-self: flex-start;
+}
+.information-package-tour-text {
+  align-self: center;
+}
+.information-package-tour-textinput {
+  width: 427px;
+  align-self: center;
+}
