@@ -136,17 +136,17 @@ const AdditionalInformationPackageTour = () => {
       <Navbar />
       <Picture />
       <div className="payment-container04">
-        <span className="payment-text01">{tour?.name}</span>
+        <span className="package-text01">{tour?.name}</span>
       </div>
       <div className="information-package-tour-container1">
         <div className="information-package-tour-container2">
-          <h2>โปรแกรมทัวร์{tour?.name}</h2>
+          <h2>โปรแกรมทัวร์</h2>
           <div className="information-package-tour-container3">
             <p>{tour?.tour_program}</p>
           </div>
         </div>
         <div className="information-package-tour-container4">
-        <h2>สิ่งที่รวมในทัวร์{tour?.name}</h2>
+        <h2>สิ่งที่รวมในทัวร์</h2>
           <div className="information-package-tour-container6">
             <p>{tour?.service}</p>
           </div>
@@ -191,7 +191,7 @@ const AdditionalInformationPackageTour = () => {
               </span>
             </button>
           </div>
-          <h2>รีวิวของทัวร์</h2>
+          <h2>รีวิว</h2>
           <div className="information-package-tour-container7">
             <div>
               <form>
