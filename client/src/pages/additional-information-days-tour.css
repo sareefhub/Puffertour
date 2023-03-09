@@ -26,7 +26,7 @@
 
 .information-days-tour-container3 {
   width: 80%;
-  height: 30%;
+  height: auto;
   background-color: white;
   border-radius: 20px;
   font-size: 25px;
@@ -65,7 +65,7 @@
 }
 .information-days-tour-container6 {
   width: 80%;
-  height: 170px;
+  height: auto;
   background-color: white;
   border-radius: 20px;
   font-size: 23px;
