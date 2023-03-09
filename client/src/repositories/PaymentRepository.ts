@@ -2,13 +2,12 @@ import { IRepository } from "./IRepository"
 import Payment from "../models/Payment";
 import ReserveStatus from "../models/Reserve";
 import { getUserData } from "../helper";
-import conf from "../conf";
 
 
 const user = getUserData()
 
 export class PaymentRepository implements IRepository<Payment | ReserveStatus>{
-    urlPrefix = `${conf.apiPrefix}/payments`
+    urlPrefix = `http://localhost:1337/api/payments`
     token = user.jwt
 
     async getByUser(): Promise<ReserveStatus[] | null> {
