@@ -1,4 +1,4 @@
-FROM strapi/base
+FROM node:16-alpine
 
 WORKDIR /app
 
@@ -12,4 +12,4 @@ RUN npm run build
 
 EXPOSE 1337
 
-CMD [ "npm", "start"]
+CMD ["npm", "start"]
