@@ -142,11 +142,11 @@ const AdditionalInformationDaysTour = () => {
       </div>
       <div className="information-days-tour-container1">
         <div className="information-days-tour-container2">
-          <h2>โปรแกรมทัวร์{tour?.name}</h2>
+          <h2>โปรแกรมทัวร์</h2>
           <div className="information-days-tour-container3">
             <p>{tour?.tour_program}</p>
           </div>
-          <h2>สิ่งที่รวมในทัวร์{tour?.name}</h2>
+          <h2>สิ่งที่รวมในทัวร์</h2>
           <div className="information-days-tour-container6">
             <p>{tour?.service}</p>
           </div>
@@ -193,7 +193,7 @@ const AdditionalInformationDaysTour = () => {
               </span>
             </button>
           </div>
-          <h2>รีวิวของทัวร์</h2>
+          <h2>รีวิว</h2>
           <div className="information-days-tour-container7">
             <div>
               <form>
@@ -218,14 +218,9 @@ const AdditionalInformationDaysTour = () => {
                       value={reviewtext}
                       onChange={handleTextChange}
                     />
-                    <button
-                      className="information-days-tour-navlink6 button"
-                      onClick={handleReview}
-                    >
-                    <span className="information-days-tour-text18">
-                    <span>รีวิว</span>
-                    </span>
-                    </button>
+                    <div className="plane" onClick={handleReview}>
+                    <img src="/pictures/planeicon (2).png" alt="" />
+                    </div>
                   </div>
                 </div>
               </form>

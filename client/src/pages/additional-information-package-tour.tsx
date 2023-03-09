@@ -216,14 +216,9 @@ const AdditionalInformationPackageTour = () => {
                       value={reviewtext}
                       onChange={handleTextChange}
                     />
-                    <button
-                      className="information-package-tour-navlink6 button"
-                      onClick={handleReview}
-                    >
-                    <span className="information-package-tour-text18">
-                    <span>รีวิว</span>
-                    </span>
-                    </button>
+                    <div className="plane" onClick={handleReview}>
+                    <img src="/pictures/planeicon (2).png" alt="" />
+                    </div>
                   </div>
                 </div>
               </form>
