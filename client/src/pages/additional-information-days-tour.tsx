@@ -137,8 +137,8 @@ const AdditionalInformationDaysTour = () => {
     <div className="information-days-tour-container">
       <Navbar />
       <Picture />
-      <div className="tap-bar">
-        <span className="text-tour">{tour?.name}</span>
+      <div className="payment-container04">
+        <span className="payment-text01">{tour?.name}</span>
       </div>
       <div className="information-days-tour-container1">
         <div className="information-days-tour-container2">
