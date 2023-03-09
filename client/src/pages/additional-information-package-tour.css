@@ -204,4 +204,13 @@
     font-family: Pridi;
     font-weight: bold;
   }
+  .information-package-tour-container6 {
+    width: 80%;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 23px;
+    margin: 30px;
+    padding: 40px;
+  }
 }

@@ -13,7 +13,7 @@ const Login: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const response = await fetch(`${conf.apiPrefix}/auth/local`, {
+    const response = await fetch(`${conf.apiPrefix}/api/auth/local`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

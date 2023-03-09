@@ -139,7 +139,7 @@ const AdditionalInformationDaysTour = () => {
       <Navbar />
       <Picture />
       <div className="payment-container04">
-        <span className="payment-text01">{tour?.name}</span>
+        <span className="day-tour-text01">{tour?.name}</span>
       </div>
       <div className="information-days-tour-container1">
         <div className="information-days-tour-container2">
