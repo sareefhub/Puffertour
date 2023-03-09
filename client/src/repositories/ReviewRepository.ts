@@ -2,11 +2,12 @@ import { IRepository } from "./IRepository"
 import Review from "../models/Review";
 import ReviewData from "../models/Reviewdata";
 import { getUserData } from "../helper";
+import conf from "../conf";
 
 const user = getUserData()
 
 export class ReviewRepository implements IRepository<Review | ReviewData>{
-    urlPrefix = "http://localhost:1337/api/reviews"
+    urlPrefix = "`${conf.apiPrefix}/reviews"
     token = user.jwt
 
     async getReview(tourName: string): Promise<Review[] | null> {
