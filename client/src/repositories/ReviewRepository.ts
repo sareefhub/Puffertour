@@ -7,33 +7,19 @@ import conf from "../conf";
 const user = getUserData()
 
 export class ReviewRepository implements IRepository<Review | ReviewData>{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    urlPrefix = `http://localhost:1337/api/review`
-=======
-    urlPrefix = `${conf.apiPrefix}/api/reviews`
->>>>>>> d216aa0 (แก้ไข path)
-=======
-    urlPrefix = `${conf.apiPrefix}/reviews`
->>>>>>> c03127c (ทดสอบเพิ่มข้อมูล strapi)
-=======
-    urlPrefix = `${conf.apiPrefix}/api/reviews`
->>>>>>> cfe83a8 (แก้ไข path)
-=======
+
 
     urlPrefix = `${conf.apiPrefix}/api/reviews`
->>>>>>> ef97058 (แก้ config ที่เกิดจากการ merge)
-=======
 
-    urlPrefix = `${conf.apiPrefix}/api/reviews`
->>>>>>> 2ff4ef4d39b1f8e4e788a8f0ab932a022abae61a
     token = user.jwt
-    
+
     async getReview(tourName: string): Promise<Review[] | null> {
-        const res = await fetch(`${this.urlPrefix}?populate=*&filters[tour_name][$eq]=${tourName}`)
+        const res = await fetch(`${this.urlPrefix}?populate=*&filters[tour_name][$eq]=${tourName}`,{
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${this.token}`
+            }
+        })
         const data = await res.json()
         return data.data
     }

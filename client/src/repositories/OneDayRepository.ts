@@ -7,29 +7,8 @@ import conf from "../conf";
 const user = getUserData()
 
 export class OneDayRepository implements IRepository<OneDay | SeatRemaining>{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    urlPrefix = `http://localhost:1337/api/one-days`
-=======
     urlPrefix = `${conf.apiPrefix}/api/one-days`
->>>>>>> d216aa0 (แก้ไข path)
-=======
-    urlPrefix = `${conf.apiPrefix}/one-days`
->>>>>>> c03127c (ทดสอบเพิ่มข้อมูล strapi)
-=======
-    urlPrefix = `${conf.apiPrefix}/api/one-days`
->>>>>>> cfe83a8 (แก้ไข path)
-=======
 
-    urlPrefix = `${conf.apiPrefix}/api/one-days`
->>>>>>> ef97058 (แก้ config ที่เกิดจากการ merge)
-=======
-
-    urlPrefix = `${conf.apiPrefix}/api/one-days`
->>>>>>> 2ff4ef4d39b1f8e4e788a8f0ab932a022abae61a
     token = user.jwt
 
     async get(id: string): Promise<OneDay[] | null> {

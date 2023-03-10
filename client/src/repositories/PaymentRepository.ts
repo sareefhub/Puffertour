@@ -8,29 +8,7 @@ import conf from "../conf";
 const user = getUserData()
 
 export class PaymentRepository implements IRepository<Payment | ReserveStatus>{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    urlPrefix = `http://localhost:1337/api/payments`
-=======
     urlPrefix = `${conf.apiPrefix}/api/payments`
->>>>>>> d216aa0 (แก้ไข path)
-=======
-    urlPrefix = `${conf.apiPrefix}/payments`
->>>>>>> c03127c (ทดสอบเพิ่มข้อมูล strapi)
-=======
-    urlPrefix = `${conf.apiPrefix}/api/payments`
->>>>>>> cfe83a8 (แก้ไข path)
-=======
-
-    urlPrefix = `${conf.apiPrefix}/api/payments`
->>>>>>> ef97058 (แก้ config ที่เกิดจากการ merge)
-=======
-
-    urlPrefix = `${conf.apiPrefix}/api/payments`
->>>>>>> 2ff4ef4d39b1f8e4e788a8f0ab932a022abae61a
     token = user.jwt
 
     async getByUser(): Promise<ReserveStatus[] | null> {
