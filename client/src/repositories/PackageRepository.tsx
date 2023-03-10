@@ -11,6 +11,7 @@ export class PackageRepository implements IRepository<Package | SeatRemaining>{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     urlPrefix = `http://localhost:1337/api/attractions`
 =======
     urlPrefix = `${conf.apiPrefix}/api/attractions`
@@ -25,6 +26,10 @@ export class PackageRepository implements IRepository<Package | SeatRemaining>{
 
     urlPrefix = `${conf.apiPrefix}/api/attractions`
 >>>>>>> ef97058 (แก้ config ที่เกิดจากการ merge)
+=======
+
+    urlPrefix = `${conf.apiPrefix}/api/attractions`
+>>>>>>> 2ff4ef4d39b1f8e4e788a8f0ab932a022abae61a
     token = user.jwt
 
     async get(id: string): Promise<Package[] | null> {
