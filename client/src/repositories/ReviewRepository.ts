@@ -14,12 +14,7 @@ export class ReviewRepository implements IRepository<Review | ReviewData>{
     token = user.jwt
 
     async getReview(tourName: string): Promise<Review[] | null> {
-        const res = await fetch(`${this.urlPrefix}?populate=*&filters[tour_name][$eq]=${tourName}`,{
-            method: "GET",
-            headers: {
-                "Authorization": `Bearer ${this.token}`
-            }
-        })
+        const res = await fetch(`${this.urlPrefix}?populate=*&filters[tour_name][$eq]=${tourName}`)
         const data = await res.json()
         return data.data
     }
