@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import DayTour from '../pages/additional-information-days-tour';
+import PackageTour from '../pages/additional-information-package-tour';
 
 describe('', () => {
   it('should display "โปรแกรมทัวร์"', () => {
     render(
       <MemoryRouter>
-        <DayTour />
+        <PackageTour />
       </MemoryRouter>
     );
     expect(screen.getByText('โปรแกรมทัวร์')).toBeInTheDocument();
@@ -14,7 +14,7 @@ describe('', () => {
   it('should display "สิ่งที่รวมในทัวร์"', () => {
     render(
       <MemoryRouter>
-        <DayTour />
+        <PackageTour />
       </MemoryRouter>
     );
     expect(screen.getByText('สิ่งที่รวมในทัวร์')).toBeInTheDocument();
@@ -22,7 +22,7 @@ describe('', () => {
   it('should display "จองทัวร์"', () => {
     render(
       <MemoryRouter>
-        <DayTour />
+        <PackageTour />
       </MemoryRouter>
     );
     expect(screen.getByText('จองทัวร์')).toBeInTheDocument();
@@ -30,7 +30,7 @@ describe('', () => {
   it('should display "จองเลย!"', () => {
     render(
       <MemoryRouter>
-        <DayTour />
+        <PackageTour />
       </MemoryRouter>
     );
     expect(screen.getByText('จองเลย!')).toBeInTheDocument();
@@ -38,7 +38,7 @@ describe('', () => {
   it('should display "รีวิว"', () => {
     render(
       <MemoryRouter>
-        <DayTour />
+        <PackageTour />
       </MemoryRouter>
     );
     expect(screen.getByText('รีวิว')).toBeInTheDocument();
