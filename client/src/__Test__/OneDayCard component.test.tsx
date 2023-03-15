@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import OneDayCard from '../components/OneDayCard';
 import { BrowserRouter } from 'react-router-dom';
-import { MemoryRouter } from 'react-router-dom';
+
 describe('OneDayCard', () => {
   const Daytour = {
   id: 1,
